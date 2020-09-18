@@ -1,0 +1,135 @@
+@use '~bootstrap/scss/bootstrap.scss';
+
+// General style overrides and custom classes
+
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 40px;
+    background-color: #f5f1ea;
+}
+
+// /* --- Bottom Navbar ---  */
+.navbar {
+  background-color: #f5f1ea;
+}
+
+.navbar-brand {
+  margin-right: 5px;
+  font-size: x-large;
+  color: #2c3e50 !important;
+}
+
+.navbar-text {
+  
+  margin: 5px 0px 0px 5px;
+  color: #2c3e50 !important;
+}
+
+.nav-item {
+  margin-top: 6px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link{
+  color: #2c3e50 !important;
+}
+
+/* --- Header ---  */
+
+.header-info {
+    font-size: medium;
+    text-transform: uppercase; 
+}
+
+.header-info svg {
+  margin-bottom: 6px;
+}
+
+header {
+    height: 450px;
+    // background-color: rgb(170, 170, 250);
+}
+
+header h1{
+    position: relative;
+    padding-top: 30px;
+    font-size: 90px;
+    width: 100%;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 2;  
+}
+
+header h2{
+    position: relative;
+    font-size: 47px;
+    width: 100%;
+    font-weight: 200;
+    z-index: 2;   
+}
+
+
+.portrait{
+    margin-top: -130px;
+    max-width: 30%;
+}
+
+/* --- Section A propos ---  */
+
+.a-propos{
+  height: 200px;
+  // background-color: burlywood;
+}
+
+//MEDIA QUERIES
+
+// // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    //HEADER
+    header h1{
+        font-size: 70px;
+        width: 100%;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    header h2{
+        font-size: 30px;
+        width: 100%;
+        font-weight: 200;
+        z-index: 2;   
+    }
+
+    .city, .mail {
+        display: none;
+    }
+
+    .portrait{
+        margin-top: -104px;
+    }
+   
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+
+    .portrait{
+        max-width: 60% !important;
+    }
+
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+
+
+}

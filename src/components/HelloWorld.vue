@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div class="alert alert-success">This is a sweet success message</div>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
