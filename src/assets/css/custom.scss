@@ -8,7 +8,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     background-color: #f5f1ea;
 }
 
@@ -39,6 +40,10 @@ body {
 
 /* --- Header ---  */
 
+header {
+  height: 100vh;
+}
+
 .header-info {
     font-size: medium;
     text-transform: uppercase; 
@@ -46,11 +51,6 @@ body {
 
 .header-info svg {
   margin-bottom: 6px;
-}
-
-header {
-    height: 450px;
-    // background-color: rgb(170, 170, 250);
 }
 
 header h1{
@@ -74,14 +74,19 @@ header h2{
 
 .portrait{
     margin-top: -130px;
-    max-width: 30%;
+    max-width: 25%;
 }
 
 /* --- Section A propos ---  */
 
+.section-a-propos{
+  height: 100vh;
+  padding: 0px 20px;
+}
+
 .a-propos{
-  height: 200px;
-  // background-color: burlywood;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 //MEDIA QUERIES
@@ -108,7 +113,7 @@ header h2{
     }
 
     .portrait{
-        margin-top: -104px;
+        margin-top: -97px;
     }
    
 }
@@ -117,7 +122,7 @@ header h2{
 @media (max-width: 767.98px) {
 
     .portrait{
-        max-width: 60% !important;
+        max-width: 50% !important;
     }
 
  }

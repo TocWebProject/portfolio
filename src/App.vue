@@ -29,49 +29,26 @@
     </nav>
 
     <!-- Header -->
-    <header>
-      <div class="container header-info">
-        <div class="row">
-          <div class="col-sm city">
-            <p>
-              <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-geo-alt-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-              </svg>
-              Rennes
-            </p>
-          </div>
-          <div class="col-sm">
-            <p>
-              Portfolio
-            </p>
-          </div>
-          <div class="col-sm mail">
-            <p>
-              rioualy@gmail.com
-            </p>
-          </div>
-        </div>
-      </div>
-      <h1>Yann Rioual</h1>
-      <h2>Développeur Web Junior</h2>
-      <img src="./assets/img/yann-rioual-portrait.png" class="portrait" alt="portrait Yann Rioual">
-    </header>
-    <section class="a-propos">
+    <Header></Header>
 
-
-    </section>
+    <!-- A propos -->
+    <Apropos></Apropos>  
+ 
+   
   </div>
     
   
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Apropos from './components/Apropos.vue'
 
 export default {
   name: 'App',
   components: {
-
+    Header,
+    Apropos  
   }
 }
 </script>
