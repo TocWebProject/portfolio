@@ -19,8 +19,8 @@ export default {
   data () {
   return {
     
-  }
-},
+    }
+  },
 }
 </script>
 
@@ -32,7 +32,7 @@ export default {
 .before-enter {
   opacity: 0;
   transition: all 2s ease-out;
-  transform: translateY(120px);
+  transform: translateY(100px);
   
 }
 

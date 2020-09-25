@@ -1,11 +1,11 @@
 <template>
    <section id="formation" class="section-formation">
        <h3>Formation OpenClassRooms</h3>
-       <p> Diplôme Obtenu en septembre 2020 - Certifié niveau 3 </p>
+       <p> Diplôme Obtenu en septembre 2020 <br> Certifié niveau 3 </p>
        <div class="container pt-4">
            <div class="row justify-content-center">   
                <!-- PROJET1  -->
-                <div class="col-8 mb-4">
+                <div class="col-10 col-lg-8 mb-5">
                     <div class="card text-center">
                         <div class="card-header text-center">
                             Projet 1
@@ -18,34 +18,131 @@
                                 </svg>
                             </div>
                             <h4 class="mt-4">Intégrez la maquette du site d'une agence web</h4>
-                            <button class="btn btn-secondary mb-3" id="show-modal" @click="showModal = true">Détails</button>
+                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet1 = true">Détails</button>
                             <transition name="openModal">
-                                <ProjetOne v-if="showModal" @close="showModal = false"></ProjetOne>
+                                <ProjetOne v-if="showModalProjet1" @close="showModalProjet1 = false"></ProjetOne>
                             </transition>
                         </div>
                     </div>
                 </div>
+                <!-- PROJET2  -->
+                <div class="col-10 col-lg-8 mb-5">
+                    <div class="card text-center">
+                        <div class="card-header text-center">
+                            Projet 2
+                        </div>
+                            <img :src="imgProjet2" class="img img-fluid projet1-img" alt="projet-2 OpenClassRooms">
+                        <div class="card-block">
+                            <div class="project-icon">
+                               <img :src="imgProjet2Logo" alt="wordpress logo"> 
+                            </div>
+                            <h4 class="mt-4">Créez un site en personnalisant un thème WordPress</h4>
+                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet2 = true">Détails</button>
+                            <transition name="openModal">
+                                <ProjetTwo v-if="showModalProjet2" @close="showModalProjet2 = false"></ProjetTwo>
+                            </transition>
+                        </div>
+                    </div>
+                </div>
+                <!-- PROJET3  -->
+                <div class="col-10 col-lg-8 mb-5">
+                    <div class="card text-center">
+                        <div class="card-header text-center">
+                            Projet 3
+                        </div>
+                            <img :src="imgProjet3" class="img img-fluid projet1-img" alt="projet-3 OpenClassRooms">
+                        <div class="card-block">
+                            <div class="project-icon">
+                               <img :src="imgProjet3Logo" alt="JS logo"> 
+                            </div>
+                            <h4 class="mt-4">Concevez une carte interactive de location de vélos</h4>
+                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet3 = true">Détails</button>
+                            <transition name="openModal">
+                                <ProjetThree v-if="showModalProjet3" @close="showModalProjet3 = false"></ProjetThree>
+                            </transition>
+                        </div>
+                    </div>
+                </div>
+                <!-- PROJET4  -->
+                <div class="col-10 col-lg-8 mb-5">
+                    <div class="card text-center">
+                        <div class="card-header text-center">
+                            Projet 4
+                        </div>
+                            <img :src="imgProjet4" class="img img-fluid projet1-img" alt="projet-4 OpenClassRooms">
+                        <div class="card-block">
+                            <div class="project-icon">
+                               <img :src="imgProjet4Logo" alt="JS logo"> 
+                            </div>
+                            <h4 class="mt-4">Créez un blog CRUD pour un écrivain</h4>
+                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet4 = true">Détails</button>
+                            <transition name="openModal">
+                                <ProjetFour v-if="showModalProjet4" @close="showModalProjet4 = false"></ProjetFour>
+                            </transition>
+                        </div>
+                    </div>
+                </div>
+                <!-- PROJET5  -->
+                <div class="col-10 col-lg-8 mb-5">
+                    <div class="card text-center">
+                        <div class="card-header text-center">
+                            Projet 5
+                        </div>
+                            <img :src="imgProjet5" class="img img-fluid projet1-img" alt="projet-5 OpenClassRooms">
+                        <div class="card-block">
+                            <div class="project-icon">
+                               <img :src="imgProjet5Logo" alt="Laravel and Vue.js Logo"> 
+                            </div>
+                            <h4 class="mt-4">Projet personnel:<br>App Journal de Bord</h4>
+                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet5 = true">Détails</button>
+                            <transition name="openModal">
+                                <ProjetFive v-if="showModalProjet5" @close="showModalProjet5 = false"></ProjetFive>
+                            </transition>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
        </div>
     </section>
 </template>
 
 <script>
-
 import ProjetOne from './ProjetOne.vue'
+import ProjetTwo from './ProjetTwo.vue'
+import ProjetThree from './ProjetThree.vue'
+import ProjetFour from './ProjetFour.vue'
+import ProjetFive from './ProjetFive.vue'
 
 export default {
     name: 'Formation',
     components: {
-        ProjetOne
+        ProjetOne,
+        ProjetTwo,
+        ProjetThree,
+        ProjetFour,
+        ProjetFive
     },
     props: {
         
     },
     data () {
     return {
-        showModal: false,
-        imgProjet1: require('@/assets/img/projet1.png')
+        showModalProjet1: false,
+        showModalProjet2: false,
+        showModalProjet3: false,
+        showModalProjet4: false,
+        showModalProjet5: false,
+        imgProjet1: require('@/assets/img/projet1.png'),
+        imgProjet2: require('@/assets/img/wpdashboard.png'),
+        imgProjet2Logo: require('@/assets/img/WordPress-logotype.png'),
+        imgProjet3: require('@/assets/img/projet3-screenshot-map-reservation.png'),
+        imgProjet3Logo: require('@/assets/img/JavaScript-logo.png'),
+        imgProjet4: require('@/assets/img/projet4-screenshot.png'),
+        imgProjet4Logo: require('@/assets/img/php-logo.png'),
+        imgProjet5: require('@/assets/img/projet5-screenshot.png'),
+        imgProjet5Logo: require('@/assets/img/laravel-vue.png')
     }
     },
 }
