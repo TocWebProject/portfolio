@@ -55,7 +55,14 @@
           </div>
           <h1 ref="h1">Yann Rioual</h1>
           <h2 ref="h2">Développeur Web Junior</h2>
-          <img ref="portrait" src="./assets/img/yann-rioual-portrait.png" class="portrait" alt="portrait Yann Rioual">
+      
+          <picture>
+                <source media="(max-width: 575.97px)" srcset="./assets/img/yann-rioual-portrait-180x270.png">
+                <source media="(min-width: 575.98px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
+                <source media="(max-width: 768px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
+                <source media="(min-width: 769px)" srcset="./assets/img/yann-rioual-portrait-409x614.png">
+                <img ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
+          </picture> 
         </header>
 
     
@@ -148,7 +155,14 @@
 <script>
 import Apropos from './components/Apropos.vue'
 import Formation from './components/Formation.vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 import { TimelineLite } from 'gsap'
+
 
 export default {
   name: 'App',
@@ -156,8 +170,9 @@ export default {
     Apropos,  
     Formation
   },
-  mounted() {
-    // GSAP ANIMATION FOR INTRO
+  methods: {
+    introAnimation(){
+       // GSAP ANIMATION FOR INTRO
     const { text1, text2, text3, slider, intro, headerInfo, portrait, h1, h2 } = this.$refs
     const timeline = new TimelineLite()
     
@@ -186,9 +201,72 @@ export default {
       opacity: 0 }, { opacity: 1, duration: 1
     }, "-=1")
     timeline.fromTo(portrait, {
-     opacity: 0 }, { opacity: 1, duration: 1 }, "-=2")
+     opacity: 0 }, { opacity: 1, duration: 4 }, "-=2")
+    },
 
+    headerAnimation(){
+
+      const { h1, h2, portrait, headerInfo } = this.$refs
+
+      gsap.to(headerInfo, {
+        scrollTrigger: {
+          trigger: headerInfo,
+          start: '7% 7%',
+          scrub: 1,
+          toggleActions: "restart resume reverse reverse"
+        },
+        x : innerWidth * -1,
+       
+        duration: 4 
+      });
+
+      gsap.to(h1, {
+        scrollTrigger: {
+          trigger: h1,
+          start: '15% 15%',
+          scrub: 1,
+          toggleActions: "restart resume reverse reverse"
+        },
+        x : innerWidth * 1,
+       
+        duration: 4 
+      });
+
+      gsap.to(h2, { 
+        scrollTrigger: {
+          trigger: h2,
+          start: '30% 30%',
+          scrub: 1,
+          toggleActions: "restart resume reverse reverse"
+        },
+        x : innerWidth * -1,
+        duration: 4 
+      });
+
+      gsap.to(portrait, {
+        scrollTrigger: {
+          trigger: portrait,
+          start: '40% 40%',
+          scrub: 1,
+          toggleActions: "restart resume reverse reverse"
+        },
+        y : innerWidth * -1,
+        duration: 4 
+      });
+      
+    },
+
+  },
+
+  mounted() {
+    this.introAnimation();
+    this.headerAnimation();
+   
   }
-
-}
+};
 </script>
+
+<style scoped>
+
+
+</style>

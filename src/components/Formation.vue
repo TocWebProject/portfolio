@@ -151,18 +151,5 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-/* ScrollAnimation */
-
-.before-enter {
-  opacity: 0;
-  transition: all 2s ease-out;
-  transform: translateY(120px);
-  
-}
-
-.enter {
-  opacity: 1;
-  transform: translateY(0px);
-}
 
 </style>

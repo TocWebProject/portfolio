@@ -82,7 +82,7 @@ body {
 /* ----- Header -----  */
 
 header {
-  height: 80vh;
+  height: auto;
 }
 
 .header-info {
@@ -114,19 +114,19 @@ header h2 {
 
 .portrait {
   margin-top: -130px;
-  max-width: 25%;
 }
+
 
 /* ----- Section A propos -----  */
 
 .section-a-propos {
   height: auto;
-  padding: 80px 20px;
-  margin-top: 120px;
-  margin-bottom: 80px;
+  padding: 40px 20px;
+  margin-bottom: 200px;
 }
 
 .a-propos {
+  opacity: 0;
   font-size: 24px;
   font-weight: 400;
 }
@@ -273,7 +273,7 @@ header h2 {
 
 /* ------- Section Projets Web -----  */
 .section-projets-web {
-  margin-top: 90px;
+  padding-top: 90px;
   margin-bottom: 90px;
   background-color: #f5f1ea ;
   height: auto;
@@ -346,6 +346,8 @@ header h2 {
     margin-top: -97px;
   }  
 
+  
+
   //SECTION APROPOS
   .a-propos {
     font-size: 20px;
@@ -376,9 +378,10 @@ header h2 {
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
 
-  .portrait{
-    max-width: 50% !important;
-  }
+
+  // .portrait{
+  // //   max-width: 50% !important;
+  // // }
 
 }
 
