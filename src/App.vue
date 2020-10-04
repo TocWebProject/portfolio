@@ -53,7 +53,9 @@
               </div>
               </div>
           </div>
+          
           <h1 ref="h1">Yann Rioual</h1>
+          
           <h2 ref="h2">Développeur Web Junior</h2>
       
           <picture>
@@ -61,35 +63,35 @@
                 <source media="(min-width: 575.98px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
                 <source media="(max-width: 768px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
                 <source media="(min-width: 769px)" srcset="./assets/img/yann-rioual-portrait-409x614.png">
-                <img ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
+                <img id="apropos" ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
           </picture> 
         </header>
 
-    
         <!-- A propos -->
         <Apropos></Apropos>  
-
         <!-- Formation -->
         <Formation></Formation>  
 
         <!-- Projets Web -->
-        <section id ="projetsweb" class="section-projets-web">
-          <h3 class="mb-5">Projets Web</h3>
-          <div class="container min-vh-100">
+        <section ref="projetWeb" id ="projetsweb" class="section-projets-web">
+          <div ref="projetWebTrigger" class="container min-vh-100">
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_PdzoiE.json"  background="transparent"  speed="1"  style="margin: auto; width: 110px; height: 110px;"  loop autoplay></lottie-player> 
+            <h3 class="mt-4">Projets Web</h3>
+            <hr class="separationProjetWeb mb-5">
             <div class="row align-items-center shadow rounded-lg mb-5">
                 <div class="col-lg m-4">
                 <img src="./assets/img/projet-web-ian-tocor.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de l'artiste Ian Tocor">
                 </div>
                 <div class="col-lg m-4">
                     <h3 class="mb-4 mt-0">Ian Tocor</h3>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus eligendi nam vero, ipsa quibusdam necessitatibus ullam ab tempora, porro id commodi earum nisi quasi repudiandae enim! Corporis, voluptatum assumenda repellat.</p>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus.</p>
                     <a href="https://iantocor.com/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
                 </div>
             </div> 
             <div class="row align-items-center shadow rounded-lg mb-5">
               <div class="villaBouBouTxt col-lg m-4">
                 <h3 class="mb-4 mt-0">Villa Boubou</h3>
-                <p class="mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus eligendi nam vero, ipsa quibusdam necessitatibus ullam ab tempora, porro id commodi earum nisi quasi repudiandae enim! Corporis, voluptatum assumenda repellat.</p>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus.</p>
                 <a href="https://villaboubourennes.fr/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
               </div>
               <div class="villaBouBouImg col-lg m-4">
@@ -100,9 +102,9 @@
                 <div class="col-lg m-4">
                 <img src="./assets/img/projet-web-35volts.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de 35 Volts, projet agri-culturel à Rennes">
                 </div>
-                <div class="col-lg mb-4 ">
+                <div class="col-lg m-4 ">
                     <h3 class="mb-4 mt-0">35 Volts</h3>
-                    <p class="mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus eligendi nam vero, ipsa quibusdam necessitatibus ullam ab tempora, porro id commodi earum nisi quasi repudiandae enim! Corporis, voluptatum assumenda repellat.</p>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus.</p>
                     <a href="https://35volts.fr/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>    
                 </div>
             </div>   
@@ -112,21 +114,19 @@
         </section>
 
         <!-- Contact -->
-        <section id ="contact" class="section-contact p-5">
-          <div class="container m-5 mx-auto shadow rounded contact-background">
-            <div class="row mb-4">
-              <div class="col">
-                <img class="portraitContact shadow" src="./assets/img/yann-rioual-contact-portrait.png" alt="">
-              </div>
-            </div>
-            <h3>Rencontrons nous !
-            </h3>
-            <div class="mb-3 contactMail">rioualy@gmail.com</div>
-            <div class="row pb-5">
-              <div class="col mx-auto"><a href="https://github.com/TocWebProject/" target="_blank"><img src="./assets/img/logo-github.svg.png" class="gitHubLogo" alt="Logo GitHub"></a></div>
-              <div class="col mx-auto"><a href="#" target="_blank"><img src="./assets/img/logo-linkedin-black.svg.png" class="linkedinLogo" alt="Logo Linkedin"></a></div>
-            </div>
+        <div ref="contactTrigger"></div>
+        <section ref="contactTrigger" class="section-contact pt-0 p-5">
+        <div class="container">
+          <div id="contact" class="photoPosition">
+            <img ref="portraitContact" class="portraitContact" src="./assets/img/silhouette.png" alt="silhouette Yann Rioual">   
+            <img ref="landscape" class="landscape" src="./assets/img/landscape.png" alt="landscape seascape">  
           </div>
+          <h3 ref="h3Contact">Rencontrons nous.</h3>
+          <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
+          <hr ref="hrContact" class="hrContact">
+          <!-- <div><a href="https://github.com/TocWebProject/" target="_blank"><img src="./assets/img/logo-github.svg.png" class="gitHubLogo" alt="Logo GitHub"></a></div>
+          <div><a href="#" target="_blank"><img src="./assets/img/logo-linkedin-black.svg.png" class="linkedinLogo" alt="Logo Linkedin"></a></div> -->
+        </div>
 
         </section>
         
@@ -205,62 +205,145 @@ export default {
     },
 
     headerAnimation(){
-
       const { h1, h2, portrait, headerInfo } = this.$refs
 
       gsap.to(headerInfo, {
         scrollTrigger: {
           trigger: headerInfo,
           start: '7% 7%',
-          scrub: 1,
+          scrub: 2,
           toggleActions: "restart resume reverse reverse"
         },
+        ease: "power1.inOut",
         x : innerWidth * -1,
-       
-        duration: 4 
+        duration: 5 
       });
 
       gsap.to(h1, {
         scrollTrigger: {
           trigger: h1,
-          start: '15% 15%',
-          scrub: 1,
+          start: '3% 15%',
+          scrub: 3,
           toggleActions: "restart resume reverse reverse"
         },
-        x : innerWidth * 1,
-       
+        ease: "power1.inOut",
+        y : innerWidth * -1,
         duration: 4 
       });
 
       gsap.to(h2, { 
         scrollTrigger: {
           trigger: h2,
-          start: '30% 30%',
-          scrub: 1,
-          toggleActions: "restart resume reverse reverse"
+          start: 'bottom 350px',
+          scrub: 3,
+          toggleActions: "restart resume reverse reverse",
+ 
         },
+        ease: "power1.inOut",// the ease of the snap animation ("power3" by default),
         x : innerWidth * -1,
-        duration: 4 
+        duration: 3 
       });
 
       gsap.to(portrait, {
         scrollTrigger: {
           trigger: portrait,
-          start: '40% 40%',
-          scrub: 1,
+          start: '30% 36%',
+          scrub: 2,
           toggleActions: "restart resume reverse reverse"
         },
+        ease: "power1.inOut",
         y : innerWidth * -1,
         duration: 4 
       });
       
     },
 
+    projetWebAnimation(){
+      const { projetWeb  } = this.$refs
+
+      gsap.to(projetWeb, {
+        scrollTrigger: {
+          trigger: projetWeb,
+          start: '0% 89%',
+          // end: '0% 90%',
+          toggleActions: "restart resume resume reverse"
+        },
+        ease: "power1.inOut",
+        backgroundColor: "rgba(245, 241, 234, 1)",
+        duration: 0.8,
+      });
+    },
+
+    contactTextAnimation(){
+      const { contactTrigger, h3Contact, contactMail, hrContact } = this.$refs
+      // const contactTimeline = new TimelineLite()
+      let contactTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: contactTrigger,
+          pin: true,
+          start: 'top top',
+          end: "+=30",
+          scrub: 2,
+          toggleActions: "restart resume reverse reverse"
+        }
+      });
+
+      contactTl.to(h3Contact, {
+        ease: "power1.inOut",
+        bottom: "30%",
+        duration: 2,
+      });
+
+      contactTl.to(contactMail, {
+        ease: "power4.inOut",
+        left: "36px",
+        duration: 1,
+      }, "-=0.5");
+
+      contactTl.to(hrContact, {
+        ease: "power4.inOut",
+        bottom: "25%",
+        duration: 1,
+      }, "-=1");
+    },
+
+    contactImgAnimation(){
+      const { portraitContact, landscape, contactTrigger  } = this.$refs
+      // const contactTimeline = new TimelineLite()
+      let contactImgTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: contactTrigger,
+          pin: true,
+          start: '5% top',
+          end: "+=30",
+          scrub: 3,
+          toggleActions: "restart resume reverse reverse"
+        }
+      });
+
+      contactImgTl.to( portraitContact, {
+        ease: "power4.inOut",
+        top: "-193px",
+        duration: 1,
+      }, "-=2");
+
+      contactImgTl.to(landscape, {
+        ease: "power4.inOut",
+        top: "0px",
+        duration: 1,
+      }, "-=2");
+
+    }
+
+
   },
 
   mounted() {
     this.introAnimation();
     this.headerAnimation();
+    this.projetWebAnimation();
+    this.contactTextAnimation();
+    this.contactImgAnimation();
    
   }
 };

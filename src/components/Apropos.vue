@@ -1,9 +1,12 @@
 <template>
-   <section ref="sectionAPropos" id="apropos" class="section-a-propos">
+   <section ref="sectionAPropos" class="section-a-propos">
        <div class="container align-item-center justify-content-center">
            <div ref="apropos" class="a-propos">
                <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula nunc et nibh rhoncus sodales. Vivamus elementum venenatis eleifend. Phasellus velit est, finibus nec egestas sed, venenatis eget elit. Fusce viverra blandit augue efficitur finibus. Proin eleifend mi eget semper consectetur. Donec justo felis, volutpat in ullamcorper nec, cursus sit amet sapien. Ut at erat id tortor vulputate facilisis eget vitae metus. Nullam mollis sapien vitae leo luctus placerat. Phasellus imperdiet magna elit, quis convallis dolor dapibus non. Sed ante nunc, aliquam eu eleifend tincidunt, fringilla et mauris. Sed eu arcu feugiat turpis sodales rutrum ornare quis lacus. Morbi in lectus diam. Mauris sed congue velit. Phasellus commodo pretium augue. Donec gravida mauris nec nulla vehicula ultrices. 
+                Après avoir travaillé plusieurs années dans le milieu culturel et artistique à Bruxelles, 
+                j’ai entamé ma reconvertion professionnel en Février 2019 et je suis désormais diplomé grâce la formation « Développeur Web Junior » d’OpenclassRoom.
+                Ayant de l'atrait pour l'ethétisme des médias et le graphisme, désormais passionné par le développement <span class="font-weight-bold">frontend</span> et <span class="font-weight-bold">backend</span>, je souhaite
+                me perfectionner à travers un <span class="font-weight-bold">contrat de professionnalisation</span> par l'alternance en validant un bac+3 tout en contribuant aux activités d'une équipe de développeurs chevronés 
                </p>
            </div>
        </div>
@@ -14,7 +17,6 @@
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -32,14 +34,12 @@ export default {
 
   methods: {
     aproposAnimation(){
-
       const { apropos, sectionAPropos } = this.$refs
       // IN
       gsap.to(apropos, {
         scrollTrigger: {
           trigger: sectionAPropos,
-          start: 'top center', 
-          markers: true,
+          start: 'top 63%', 
           toggleActions: "restart resume resume reverse"
         },
        opacity: 1,
@@ -50,11 +50,10 @@ export default {
         scrollTrigger: {
           trigger: apropos,
           start: 'bottom 40%',
-          scrub: 1,
-          markers: true,
+          scrub: 2,
           toggleActions: "restart resume reverse reverse"
         },
-        x : innerWidth * -1,
+        y : innerWidth * -0.8,
         duration: 4,
       });
 
