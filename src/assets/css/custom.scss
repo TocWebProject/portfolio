@@ -8,7 +8,7 @@ body {
     text-align: center;
     color: #2c3e50;
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     background-color: #f5f1ea;
     position: relative;
     overflow-y: scroll; 
@@ -138,7 +138,7 @@ header h2 {
 
 .section-formation {
   height: auto;
-  padding: 40px 0px;
+  padding: 90px 0px;
   padding-top: 80px;
   margin-top: 150px;
   color: #f5f1ea;
@@ -291,16 +291,19 @@ header h2 {
 }
 
 .section-projets-web .row{
-  background-color: #fdfdfd;
+  background-color: #fcfcfc;
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-
 .section-projets-web a {
   width: 100px;
+}
+
+.section-projets-web .img-thumbnail {
+  max-width: 88%;
 }
 
 
@@ -351,6 +354,29 @@ header h2 {
   width: 260px;
   border: 10px solid #2c3e50;
 }
+
+a .linkedinIconContact {
+  position: absolute;
+  color:  #f5f1ea; 
+  opacity: 0;
+  z-index: 2;
+}
+
+a .gitHubIconContact {
+  position: absolute;
+  color:  #f5f1ea; 
+  opacity: 0;
+  z-index: 2;
+}
+
+a .linkedinIconContact:hover {
+  color:  #eedfc6; 
+}
+
+a .gitHubIconContact:hover {
+  color:  #eedfc6; 
+}
+
 
 
 
@@ -432,6 +458,7 @@ header h2 {
   .section-contact {
     background-color: #2c3e50;
     position: relative;
+    min-height: 550px;
   }
 
   
@@ -441,7 +468,7 @@ header h2 {
   }
   
   .contactMail {
-    bottom: 28%;
+    bottom: 33%;
     left: 147px;
   }
   
@@ -452,7 +479,7 @@ header h2 {
 
   .photoPosition {
     position: absolute;
-    top: 50%;
+    top: 44%;
     right: 40%;
     width: 50px;
     height: 50px;
@@ -470,6 +497,18 @@ header h2 {
     top: -240px;
     width: 180px;
     left: -10px;
+  }
+  
+  .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 102px;
+  }
+  
+  .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 102px;
   }
   
   
@@ -493,31 +532,31 @@ header h2 {
   .section-contact {
     background-color: #2c3e50;
     position: relative;
+    min-height: 750px;
   }
 
   .section-contact h3 {
-    left: 152px;
-    bottom: 32%;
+    left: 130px;
+    bottom: 75%;
   }
   
   .contactMail {
-    bottom: 30%;
-    left: 153px;
+    bottom: 33%;
+    left: 390px;
   }
   
   .hrContact{
-    bottom: 28%;
-    left: 153px;
+    bottom: 5%;
+    left: 131px;
   }
 
   .photoPosition {
-
-    top: 40%;
-    right: 50%;
+    top: 46%;
+    right: 43%;
   }
   
   .portraitContact {
-    top: -250px;
+    top: 30px;
     left: -135px;
     margin-top: 20px;
     width: 250px;
@@ -525,8 +564,21 @@ header h2 {
   }
   
   .landscape {
+    top: -335px;
     width: 250px;
     left: -10px;
+  }
+
+  a .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 150px;
+  }
+  
+  a .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 150px;
   }
   
 
@@ -546,44 +598,62 @@ header h2 {
     order: 2;
   }
 
+  .section-projets-web .img-thumbnail {
+    max-width: 55%;
+  }
+  
+
   // SECTION CONTACT
   .section-contact {
     background-color: #2c3e50;
     position: relative;
+    min-height: 750px;
   }
 
   .section-contact h3 {
     left: 190px;
-    bottom: 37%;
+    bottom: 75%;
   }
   
   .contactMail {
     bottom: 35%;
-    left: 191px;
+    left: 460px;
   }
   
   .hrContact{
-    bottom: 32%;
+    bottom: 5%;
     left: 191px;
   }
 
   .photoPosition {
-
-    top: 40%;
-    right: 42%;
+    top: 46%;
+    right: 43%;
   }
   
   .portraitContact {
-    top: -250px;
+    top: 40px;
     left: -135px;
     margin-top: 20px;
-    width: 250px;
+    width: 235px;
     z-index: 2;
   }
   
   .landscape {
-    width: 250px;
+    top: -330px;
+    width: 235px; 
     left: -10px;
+  }
+
+  a  .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 140px;
+  }
+  
+  a .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 140px;
   }
   
 
@@ -592,47 +662,59 @@ header h2 {
 // Large devices (desktops, less than 1200px)
 @media screen and (min-width: 993px) and (max-width: 1200px) { 
 
+  // SECTION CONTACT
+  .section-contact {
+    background-color: #2c3e50;
+    position: relative;
+    min-height: 780px;
+  }
 
- // SECTION CONTACT
- .section-contact {
-  background-color: #2c3e50;
-  position: relative;
-}
+  .section-contact h3 {
+    font-size: 38px;
+    left: 152px;
+    bottom: 75%;
+  }
 
-.section-contact h3 {
-  font-size: 38px;
-  left: 152px;
-  bottom: 40%;
-}
+  .contactMail {
+    bottom: 38%;
+    left: 600px;
+  }
 
-.contactMail {
-  bottom: 38%;
-  left: 153px;
-}
+  .hrContact{
+    bottom: 5%;
+    left: 153px;
+  }
 
-.hrContact{
-  bottom: 35%;
-  left: 153px;
-}
+  .photoPosition {
+    top: 40%;
+    right: 27%;
+  }
 
-.photoPosition {
-  top: 40%;
-  right: 27%;
-}
+  .portraitContact {
+    top: 40px;
+    left: -135px;
+    margin-top: 20px;
+    width: 230px;
+    z-index: 2;
+  }
 
-.portraitContact {
-  top: -250px;
-  left: -135px;
-  margin-top: 20px;
-  width: 230px;
-  z-index: 2;
-}
+  .landscape {
+    top: -280px;
+    width: 230px;
+    left: -10px;
+  } 
 
-.landscape {
-  width: 230px;
-  left: -10px;
-} 
+  a .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 140px;
+  }
 
+  a .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 140px;
+  }
 
 }
 
@@ -641,44 +723,56 @@ header h2 {
 
    // SECTION CONTACT
  .section-contact {
-  background-color: #2c3e50;
-  position: relative;
-}
+    background-color: #2c3e50;
+    position: relative;
+    min-height: 780px;
+  }
 
-.section-contact h3 {
-  font-size: 38px;
-  left: 370px;
-  bottom: 42%;
-}
+  .section-contact h3 {
+    font-size: 38px;
+    left: 320px;
+    bottom: 75%;
+  }
 
-.contactMail {
-  bottom: 40%;
-  left: 371px;
-}
+  .contactMail {
+    bottom: 40%;
+    left: 850px;
+  }
 
-.hrContact{
-  bottom: 37%;
-  left: 371px;
-}
+  .hrContact{
+    bottom: 10%;
+    left: 321px;
+  }
 
-.photoPosition {
-  top: 40%;
-  right: 33%;
-}
+  .photoPosition {
+    top: 40%;
+    right: 33%;
+  }
 
-.portraitContact {
-  top: -303px;
-  left: -168px;
-  margin-top: 20px;
-  width: 280px;
-  z-index: 2;
-}
+  .portraitContact {
+    top: 80px;
+    left: -168px;
+    margin-top: 20px;
+    width: 280px;
+    z-index: 2;
+  }
 
-.landscape {
-  width: 280px;
-  left: -10px;
-} 
+  .landscape {
+    top: -290px;
+    width: 280px;
+    left: -10px;
+  } 
 
-
-
+  a .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 150px;
+  }
+  
+  a .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 150px;
+  }
+  
 }

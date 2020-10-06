@@ -71,14 +71,14 @@
         <Apropos></Apropos>  
         <!-- Formation -->
         <Formation></Formation>  
-
+        <div id ="projetsweb"></div>
         <!-- Projets Web -->
-        <section ref="projetWeb" id ="projetsweb" class="section-projets-web">
+        <section ref="projetWeb" class="section-projets-web">
           <div ref="projetWebTrigger" class="container min-vh-100">
             <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_PdzoiE.json"  background="transparent"  speed="1"  style="margin: auto; width: 110px; height: 110px;"  loop autoplay></lottie-player> 
             <h3 class="mt-4">Projets Web</h3>
             <hr class="separationProjetWeb mb-5">
-            <div class="row align-items-center shadow rounded-lg mb-5">
+            <div class="row align-items-center rounded-lg mb-5">
                 <div class="col-lg m-4">
                 <img src="./assets/img/projet-web-ian-tocor.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de l'artiste Ian Tocor">
                 </div>
@@ -88,7 +88,7 @@
                     <a href="https://iantocor.com/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
                 </div>
             </div> 
-            <div class="row align-items-center shadow rounded-lg mb-5">
+            <div class="row align-items-center rounded-lg mb-5">
               <div class="villaBouBouTxt col-lg m-4">
                 <h3 class="mb-4 mt-0">Villa Boubou</h3>
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus.</p>
@@ -98,7 +98,7 @@
                 <img src="./assets/img/projet-web-villa-boubou.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de la boutique Villa Boubou">
               </div>
             </div> 
-             <div class="row align-items-center shadow rounded-lg mb-5">
+             <div class="row align-items-center rounded-lg mb-5">
                 <div class="col-lg m-4">
                 <img src="./assets/img/projet-web-35volts.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de 35 Volts, projet agri-culturel à Rennes">
                 </div>
@@ -120,12 +120,13 @@
           <div id="contact" class="photoPosition">
             <img ref="portraitContact" class="portraitContact" src="./assets/img/silhouette.png" alt="silhouette Yann Rioual">   
             <img ref="landscape" class="landscape" src="./assets/img/landscape.png" alt="landscape seascape">  
+            <a href="https://www.linkedin.com/in/yann-rioual-19a8061b8/" target="_blank"><font-awesome-icon ref="linkedinIcon" class="linkedinIconContact" :icon="['fab', 'linkedin']" /></a>
+            <a href="https://github.com/TocWebProject/" target="_blank"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" /></a>
           </div>
           <h3 ref="h3Contact">Rencontrons nous.</h3>
           <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
           <hr ref="hrContact" class="hrContact">
-          <!-- <div><a href="https://github.com/TocWebProject/" target="_blank"><img src="./assets/img/logo-github.svg.png" class="gitHubLogo" alt="Logo GitHub"></a></div>
-          <div><a href="#" target="_blank"><img src="./assets/img/logo-linkedin-black.svg.png" class="linkedinLogo" alt="Logo Linkedin"></a></div> -->
+          
         </div>
 
         </section>
@@ -157,10 +158,7 @@ import Apropos from './components/Apropos.vue'
 import Formation from './components/Formation.vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
-
-
 import { TimelineLite } from 'gsap'
 
 
@@ -171,39 +169,42 @@ export default {
     Formation
   },
   methods: {
+    // INTRO GSAP
     introAnimation(){
-       // GSAP ANIMATION FOR INTRO
-    const { text1, text2, text3, slider, intro, headerInfo, portrait, h1, h2 } = this.$refs
-    const timeline = new TimelineLite()
-    
-    timeline.to(text1, {
-      y: "0%", duration: 1, stagger: 0.25
-    }, "-=0.5")
-    timeline.to(text2, {
-      y: "0%", duration: 1, stagger: 0.25
-    }, "-=0.5")
-    timeline.to(text3, {
-      y: "0%", duration: 1, stagger: 0.25
-    }, "-=0.5")
-    timeline.to(slider, {
-       y: "-100%", duration: 1.5, delay: 0.8
-    })
-    timeline.to(intro, {
-      y: "-100%", duration: 1.2
-    }, "-=1")
-    timeline.fromTo(h1, {
-      opacity: 0 }, { opacity: 1, duration: 1
-    })
-    timeline.fromTo(h2, {
-      opacity: 0 }, { opacity: 1, duration: 1
-    })
-    timeline.fromTo(headerInfo, {
-      opacity: 0 }, { opacity: 1, duration: 1
-    }, "-=1")
-    timeline.fromTo(portrait, {
-     opacity: 0 }, { opacity: 1, duration: 4 }, "-=2")
+      const { text1, text2, text3, slider, intro, headerInfo, portrait, h1, h2 } = this.$refs
+      const timeline = new TimelineLite()
+      
+      timeline.to(text1, {
+        y: "0%", duration: 1, stagger: 0.25
+      }, "-=0.5")
+      timeline.to(text2, {
+        y: "0%", duration: 1, stagger: 0.25
+      }, "-=0.5")
+      timeline.to(text3, {
+        y: "0%", duration: 1, stagger: 0.25
+      }, "-=0.5")
+      timeline.to(slider, {
+        y: "-100%", duration: 1.5, delay: 0.8
+      })
+      timeline.to(intro, {
+        y: "-100%", duration: 1.2
+      }, "-=1")
+      timeline.fromTo(h1, {
+        opacity: 0 }, { opacity: 1, duration: 1
+      })
+      timeline.fromTo(h2, {
+        opacity: 0 }, { opacity: 1, duration: 1
+      })
+      timeline.fromTo(headerInfo, {
+        opacity: 0 }, { opacity: 1, duration: 1
+      }, "-=1")
+      timeline.fromTo(portrait, {
+      opacity: 0 }, { opacity: 1, duration: 4 }, "-=2")
     },
 
+
+
+    // HEADER GSAP
     headerAnimation(){
       const { h1, h2, portrait, headerInfo } = this.$refs
 
@@ -222,7 +223,7 @@ export default {
       gsap.to(h1, {
         scrollTrigger: {
           trigger: h1,
-          start: '3% 15%',
+          start: '3% 13%',
           scrub: 3,
           toggleActions: "restart resume reverse reverse"
         },
@@ -258,6 +259,9 @@ export default {
       
     },
 
+
+
+    // PROJETWEB GSAP RESPONSIVE with Media Queries
     projetWebAnimation(){
       const { projetWeb  } = this.$refs
 
@@ -265,7 +269,6 @@ export default {
         scrollTrigger: {
           trigger: projetWeb,
           start: '0% 89%',
-          // end: '0% 90%',
           toggleActions: "restart resume resume reverse"
         },
         ease: "power1.inOut",
@@ -274,65 +277,392 @@ export default {
       });
     },
 
+
+
+    // CONTACT GSAP
     contactTextAnimation(){
-      const { contactTrigger, h3Contact, contactMail, hrContact } = this.$refs
-      // const contactTimeline = new TimelineLite()
-      let contactTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: contactTrigger,
-          pin: true,
-          start: 'top top',
-          end: "+=30",
-          scrub: 2,
-          toggleActions: "restart resume reverse reverse"
-        }
-      });
 
-      contactTl.to(h3Contact, {
-        ease: "power1.inOut",
-        bottom: "30%",
-        duration: 2,
-      });
+      const { contactTrigger, h3Contact, contactMail, hrContact, linkedinIcon, githubIcon } = this.$refs
+      ScrollTrigger.matchMedia({
+    
+        // Extra small devices (portrait phones, less than 576px)
+        "(min-width: 100px) and (max-width: 576px)": function() {
 
-      contactTl.to(contactMail, {
-        ease: "power4.inOut",
-        left: "36px",
-        duration: 1,
-      }, "-=0.5");
+          let contactTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: contactTrigger,
+              pin: true,
+              start: 'top 37%',
+              end: "+=5",
+              scrub: 3,
+              toggleActions: "restart resume reverse reverse"
+            }
+          });
 
-      contactTl.to(hrContact, {
-        ease: "power4.inOut",
-        bottom: "25%",
-        duration: 1,
-      }, "-=1");
+          contactTl.to(h3Contact, {
+            ease: "power1.inOut",
+            bottom: "35%",
+            duration: 2,
+          });
+
+          contactTl.to(contactMail, {
+            ease: "power4.inOut",
+            left: "36px",
+            duration: 1,
+          }, "-=0.5");
+
+          contactTl.to(hrContact, {
+            ease: "power4.inOut",
+            bottom: "30%",
+            duration: 1,
+          }, "-=1");
+
+          contactTl.to(githubIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=2");
+
+          contactTl.to(linkedinIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=1");
+        },
+            // Small devices (landscape phones, less than 769px)
+        "(min-width: 577px) and (max-width: 769px)": function() {
+          // The ScrollTriggers created inside these functions are segregated and get
+          // reverted/killed when the media query doesn't match anymore. 
+          let contactTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: contactTrigger,
+              pin: true,
+              start: 'top 37%',
+              end: "+=5",
+              scrub: 3,
+              toggleActions: "restart resume reverse reverse"
+            }
+          });
+
+          contactTl.to(h3Contact, {
+            ease: "power1.inOut",
+            bottom: "34%",
+            duration: 2,
+          });
+
+          contactTl.to(contactMail, {
+            ease: "power4.inOut",
+            left: "131px",
+            duration: 1,
+          }, "-=0.5");
+
+          contactTl.to(hrContact, {
+            ease: "power4.inOut",
+            bottom: "31%",
+            duration: 1,
+          }, "-=1");
+
+          contactTl.to(githubIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=2");
+
+          contactTl.to(linkedinIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=1");
+        },
+        
+        // Medium devices (tablets, less than 992px)
+        "(min-width: 770px) and (max-width: 992px)": function() {
+          // The ScrollTriggers created inside these functions are segregated and get
+          // reverted/killed when the media query doesn't match anymore. 
+          let contactTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: contactTrigger,
+              pin: true,
+              start: 'top 26%',
+              end: "+=5",
+              scrub: 3,
+              toggleActions: "restart resume reverse reverse"
+            }
+          });
+
+          contactTl.to(h3Contact, {
+            ease: "power1.inOut",
+            bottom: "38%",
+            duration: 2,
+          });
+
+          contactTl.to(contactMail, {
+            ease: "power4.inOut",
+            left: "191px",
+            duration: 1,
+          }, "-=0.5");
+
+          contactTl.to(hrContact, {
+            ease: "power4.inOut",
+            bottom: "32%",
+            duration: 1,
+          }, "-=1");
+
+          contactTl.to(githubIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=2");
+
+          contactTl.to(linkedinIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=1");
+
+        },
+
+        // Large devices (desktops, less than 1200px)
+        "(min-width: 993px) and (max-width: 1200px)": function() {
+          // The ScrollTriggers created inside these functions are segregated and get
+          // reverted/killed when the media query doesn't match anymore. 
+          let contactTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: contactTrigger,
+              pin: true,
+              start: 'top 26%',
+              end: "+=5",
+              scrub: 3,
+              toggleActions: "restart resume reverse reverse"
+            }
+          });
+
+          contactTl.to(h3Contact, {
+            ease: "power1.inOut",
+            bottom: "40%",
+            duration: 2,
+          });
+
+          contactTl.to(contactMail, {
+            ease: "power4.inOut",
+            left: "153px",
+            duration: 1,
+          }, "-=0.5");
+
+          contactTl.to(hrContact, {
+            ease: "power4.inOut",
+            bottom: "35%",
+            duration: 1,
+          }, "-=1");
+
+          contactTl.to(githubIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=2");
+
+          contactTl.to(linkedinIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=1");
+
+        },
+
+        // Sumo devices (desktops, less than 1200px)
+        "(min-width: 1200px) and (max-width: 3000px)": function() {
+          // The ScrollTriggers created inside these functions are segregated and get
+          // reverted/killed when the media query doesn't match anymore. 
+          let contactTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: contactTrigger,
+              pin: true,
+              start: 'top 26%',
+              end: "+=5",
+              scrub: 3,
+              toggleActions: "restart resume reverse reverse"
+            }
+          });
+
+          contactTl.to(h3Contact, {
+            ease: "power1.inOut",
+            bottom: "42%",
+            duration: 2,
+          });
+
+          contactTl.to(contactMail, {
+            ease: "power4.inOut",
+            left: "321px",
+            duration: 1,
+          }, "-=0.5");
+
+          contactTl.to(hrContact, {
+            ease: "power4.inOut",
+            bottom: "37%",
+            duration: 1,
+          }, "-=1");
+
+          contactTl.to(githubIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=2");
+
+          contactTl.to(linkedinIcon, {
+            ease: "power1.inOut",
+            opacity: 1,
+            duration: 0.9,
+          }, "-=1");
+          
+        },
+        
+      });   
     },
 
     contactImgAnimation(){
+
       const { portraitContact, landscape, contactTrigger  } = this.$refs
-      // const contactTimeline = new TimelineLite()
-      let contactImgTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: contactTrigger,
-          pin: true,
-          start: '5% top',
-          end: "+=30",
-          scrub: 3,
-          toggleActions: "restart resume reverse reverse"
-        }
-      });
+      ScrollTrigger.matchMedia({
+    
+        // Extra small devices (portrait phones, less than 576px)
+        "(min-width: 100px) and (max-width: 576px)": function() {
+           
+            let contactImgTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: contactTrigger,
+                pin: true,
+                start: 'top 36%',
+                end: "+=10",
+                scrub: 3,
+                toggleActions: "restart resume reverse reverse"
+              }
+            });
 
-      contactImgTl.to( portraitContact, {
-        ease: "power4.inOut",
-        top: "-193px",
-        duration: 1,
-      }, "-=2");
+            contactImgTl.to( portraitContact, {
+              ease: "power4.inOut",
+              top: "-193px",
+              duration: 1,
+            }, "-=2");
 
-      contactImgTl.to(landscape, {
-        ease: "power4.inOut",
-        top: "0px",
-        duration: 1,
-      }, "-=2");
+            contactImgTl.to(landscape, {
+              ease: "power4.inOut",
+              top: "0px",
+              duration: 1,
+            }, "-=2");
+        },
+        // Small devices (landscape phones, less than 769px)
+        "(min-width: 577px) and (max-width: 769px)": function() {
+          // The ScrollTriggers created inside these functions are segregated and get
+          // reverted/killed when the media query doesn't match anymore. 
+          let contactImgTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: contactTrigger,
+                pin: true,
+                start: 'top 36%',
+                end: "+=10",
+                scrub: 3,
+                toggleActions: "restart resume reverse reverse"
+              }
+            });
 
+            contactImgTl.to( portraitContact, {
+              ease: "power4.inOut",
+              top: "-250px",
+              duration: 1,
+            }, "-=2");
+
+            contactImgTl.to(landscape, {
+              ease: "power4.inOut",
+              top: "0px",
+              duration: 1,
+            }, "-=2");
+        },
+        
+        // Medium devices (tablets, less than 992px)
+        "(min-width: 770px) and (max-width: 992px)": function() {
+          // The ScrollTriggers created inside these functions are segregated and get
+          // reverted/killed when the media query doesn't match anymore. 
+            let contactImgTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: contactTrigger,
+              pin: true,
+              start: 'top 25%',
+              end: "+=10",
+              scrub: 3,
+              toggleActions: "restart resume reverse reverse"
+            }
+          });
+
+          contactImgTl.to( portraitContact, {
+            ease: "power4.inOut",
+            top: "-250px",
+            duration: 1,
+          }, "-=2");
+
+          contactImgTl.to(landscape, {
+            ease: "power4.inOut",
+            top: "0px",
+            duration: 1,
+          }, "-=2");
+        },
+
+        // Large devices (desktops, less than 1200px)
+        "(min-width: 993px) and (max-width: 1200px)": function() {
+          // The ScrollTriggers created inside these functions are segregated and get
+          // reverted/killed when the media query doesn't match anymore. 
+          let contactImgTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: contactTrigger,
+              pin: true,
+              start: 'top 25%',
+              end: "+=10",
+              scrub: 3,
+              toggleActions: "restart resume reverse reverse"
+            }
+          });
+
+          contactImgTl.to( portraitContact, {
+            ease: "power4.inOut",
+            top: "-250px",
+            duration: 1,
+          }, "-=2");
+
+          contactImgTl.to(landscape, {
+            ease: "power4.inOut",
+            top: "0px",
+            duration: 1,
+          }, "-=2");
+        },
+
+        // Sumo devices (desktops, less than 1200px)
+        "(min-width: 1200px) and (max-width: 3000px)": function() {
+          // The ScrollTriggers created inside these functions are segregated and get
+          // reverted/killed when the media query doesn't match anymore. 
+          let contactImgTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: contactTrigger,
+                pin: true,
+                start: 'top 38%',
+                end: "+=10",
+                scrub: 3,
+                toggleActions: "restart resume reverse reverse"
+              }
+            });
+
+            contactImgTl.to( portraitContact, {
+              ease: "power4.inOut",
+              top: "-303px",
+              duration: 1,
+            }, "-=2");
+
+            contactImgTl.to(landscape, {
+              ease: "power4.inOut",
+              top: "0px",
+              duration: 1,
+            }, "-=2");
+        },
+        
+      }); 
     }
 
 
