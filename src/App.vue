@@ -84,14 +84,14 @@
                 </div>
                 <div class="col-lg m-4">
                     <h3 class="mb-4 mt-0">Ian Tocor</h3>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus.</p>
+                    <p class="mb-4">Mon portfolio artistique sous Wordpress, quelques années de création musicale et photographique.</p>
                     <a href="https://iantocor.com/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
                 </div>
             </div> 
             <div class="row align-items-center rounded-lg mb-5">
               <div class="villaBouBouTxt col-lg m-4">
                 <h3 class="mb-4 mt-0">Villa Boubou</h3>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus.</p>
+                <p class="mb-4">Site vitrine Wordpress et SEO pour la boutique dépôt-vente Villa Boubou situé à Rennes.</p>
                 <a href="https://villaboubourennes.fr/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
               </div>
               <div class="villaBouBouImg col-lg m-4">
@@ -104,7 +104,8 @@
                 </div>
                 <div class="col-lg m-4 ">
                     <h3 class="mb-4 mt-0">35 Volts</h3>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus cupiditate ducimus rem fugiat unde optio voluptatum placeat laudantium natus.</p>
+                    <p class="mb-4">Landing Page avec animations et redirection vers les réseaux sociaux:
+                     35 volts Projet de tier lieu Agri-Culturel, site en complément d'un dossier répondant à un appel d'offre de la ville de Rennes</p>
                     <a href="https://35volts.fr/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>    
                 </div>
             </div>   
