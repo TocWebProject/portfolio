@@ -76,7 +76,7 @@
         <section ref="projetWeb" class="section-projets-web">
           <div ref="projetWebTrigger" class="container min-vh-100">
             <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_PdzoiE.json"  background="transparent"  speed="1"  style="margin: auto; width: 110px; height: 110px;"  loop autoplay></lottie-player> 
-            <h3 class="mt-4">Projets Web</h3>
+            <h3 class="titreProjetsWeb mt-4">Projets Web</h3>
             <hr class="separationProjetWeb mb-5">
             <div class="row align-items-center rounded-lg mb-5">
                 <div class="col-lg m-4">
@@ -261,7 +261,7 @@ export default {
 
 
 
-    // PROJETWEB GSAP RESPONSIVE with Media Queries
+    // PROJETWEB GSAP 
     projetWebAnimation(){
       const { projetWeb  } = this.$refs
 
@@ -279,7 +279,7 @@ export default {
 
 
 
-    // CONTACT GSAP
+    // CONTACT GSAP RESPONSIVE with Media Queries
     contactTextAnimation(){
 
       const { contactTrigger, h3Contact, contactMail, hrContact, linkedinIcon, githubIcon } = this.$refs
@@ -669,6 +669,7 @@ export default {
   },
 
   mounted() {
+    
     this.introAnimation();
     this.headerAnimation();
     this.projetWebAnimation();

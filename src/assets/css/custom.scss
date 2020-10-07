@@ -2,7 +2,7 @@
 
 // General style overrides and custom classes
 body {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: Avenir, Helvetica, Arial, sans-serif, 'Cinzel', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -95,6 +95,7 @@ header {
 }
 
 header h1 {
+  font-family: 'Cinzel', serif;
   position: relative;
   padding-top: 50px;
   font-size: 90px;
@@ -149,6 +150,7 @@ header h2 {
   border: 1px solid #f5f1ea;
 }
 .section-formation h3{
+  font-family: 'Cinzel', serif;
   font-size: 47px;
 }
 
@@ -283,6 +285,11 @@ header h2 {
   padding-bottom: 90px;
   background-color: rgba(44, 62, 80, 1);
   height: auto;
+}
+
+.titreProjetsWeb {
+  font-family: 'Cinzel', serif;
+  font-size: 47px;
 }
 
 .separationProjetWeb {
@@ -443,6 +450,10 @@ a .gitHubIconContact:hover {
   .section-projets-web .row{
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  .titreProjetsWeb {
+    font-size: 30px;
   }
 
   .villaBouBouImg {
