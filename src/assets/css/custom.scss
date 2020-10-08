@@ -1,0 +1,803 @@
+@use '~bootstrap/scss/bootstrap.scss';
+
+// General style overrides and custom classes
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif, 'Cinzel', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    background-color: #f5f1ea;
+    position: relative;
+    overflow-y: scroll; 
+}
+
+/* ----- Intro -----  */
+
+.intro {
+  background: #2c3e50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.slider {
+  background: #f5f1ea;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(100vh);
+  z-index: 10;
+}
+
+.intro-text {
+  font-family: 'Cinzel', serif;
+  color: #f5f1ea;
+  font-size: 3rem;
+}
+
+.hide {
+  background: #2c3e50;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+/* ----- Bottom Navbar -----  */
+.navbar {
+  background-color: #f5f1ea;
+}
+
+.navbar-brand {
+  margin-right: 5px;
+  font-size: x-large;
+  color: #2c3e50 !important;
+}
+
+.navbar-text {
+  
+  margin: 5px 0px 0px 5px;
+  color: #2c3e50 !important;
+}
+
+.nav-item {
+  margin-top: 6px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #2c3e50 !important;
+}
+
+/* ----- Header -----  */
+
+header {
+  height: auto;
+}
+
+.header-info {
+  font-size: medium;
+  text-transform: uppercase; 
+}
+
+.header-info svg {
+  margin-bottom: 6px;
+}
+
+header h1 {
+  font-family: 'Cinzel', serif;
+  position: relative;
+  padding-top: 50px;
+  font-size: 90px;
+  width: 100%;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 1;  
+}
+
+header h2 {
+  position: relative;
+  font-size: 40px;
+  width: 100%;
+  font-weight: 200;
+  z-index: 2;  
+}
+
+.portrait {
+  position: relative;
+  margin-top: -124px;
+}
+
+
+/* ----- Section A propos -----  */
+
+.section-a-propos {
+  height: auto;
+  padding: 40px 20px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.a-propos {
+  opacity: 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+
+/* ----- Section Formation -----  */
+
+.section-formation {
+  height: auto;
+  padding: 90px 0px;
+  padding-top: 90px;
+  margin-top: 40px;
+  color: #f5f1ea;
+  background-color: rgba(245, 241, 234, 1);
+}
+.separationLineFormation {
+  width: 8%;
+  border: 1px solid #f5f1ea;
+}
+.section-formation h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 47px;
+}
+
+.card {
+  color: #2c3e50;
+}
+
+.card-header {
+  background-color: #f5f1ea;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.projet1-img {
+  width: auto;
+  background-position: center center;
+  background-size: cover;
+}
+
+.card-block {
+  background-color: #f5f1ea;
+}
+
+.project-icon {
+  height: 30px;
+}
+.project-icon svg, .project-icon img {
+  width: 80px;
+  height: 80px;
+  padding: 12px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: -50px;
+  margin-bottom: 1em;
+  object-fit: cover;
+  border: 4px solid white;
+  background: #f5f1ea;
+}
+
+a .gitHubIconFormation {
+  font-size: 80px;
+  padding-top: 15px;
+  color:  rgb(44, 62, 80);
+}
+
+a .gitHubIconFormation:hover {
+  font-size: 80px;
+  padding-top: 15px;
+  color: #445769;
+}
+
+.gitHubLink {
+  color: #2c3e50;
+  font-weight: 200;
+}
+
+.gitHubLink:hover {
+  color: #1d2833;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+// MODAL PROJETS FORMATION 
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 62, 80, 0.9);
+  display: table;
+  transition: opacity 0.3s ease;
+}
+
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-container {
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  background-color:  #fcf9f5;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.modal-header {
+  padding: 10px;
+}
+
+.modal-header h4 {
+  margin-bottom: 0px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  margin: 12px 40px;
+  padding: 10px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+}
+
+.modal-body h4 {
+  margin-bottom: 5px;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+/*
+ * Transition Modal Style
+ */
+
+ //Open Modal
+ .openModal-enter-active, .openModal-leave-active {
+  transition: opacity .5s;
+}
+.openModal-enter, .openModal-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
+/* ------- Section Projets Web -----  */
+
+.section-projets-web {
+  padding-top: 110px;
+  padding-bottom: 90px;
+  background-color: rgba(44, 62, 80, 1);
+  height: auto;
+}
+
+.titreProjetsWeb {
+  font-family: 'Cinzel', serif;
+  font-size: 47px;
+}
+
+.separationProjetWeb {
+  width: 8%;
+  border: 1px solid rgba(44, 62, 80, 1);
+}
+
+.section-projets-web .row{
+  background-color: #fcfcfc;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.section-projets-web a {
+  width: 100px;
+}
+
+.section-projets-web .img-thumbnail {
+  max-width: 88%;
+}
+
+
+/* ----- Section Contact -----  */
+
+.section-contact {
+  background-color: #2c3e50;
+  height: 100vh;
+  position: relative;
+}
+
+
+.section-contact h3 {
+  position: absolute;
+  color: #fcf9f5;
+  z-index: 4;
+}
+
+.contactMail {
+  position: absolute;
+  color: #f5f1ea;
+  font-weight: 400;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.hrContact {
+  position: absolute;
+  width: 20px;
+  border: 1px solid #fcf9f5;
+}
+
+.photoPosition {
+  position: absolute;
+  top: 50%;
+  right: 38%;
+  width: 50px;
+  height: 50px;
+}
+
+.portraitContact {
+  position: absolute;
+  width: 250px;
+  border: 10px solid #2c3e50;
+}
+
+.landscape {
+  position: absolute;
+  width: 260px;
+  border: 10px solid #2c3e50;
+}
+
+a .linkedinIconContact {
+  position: absolute;
+  color:  #f5f1ea; 
+  opacity: 0;
+  z-index: 2;
+}
+
+a .gitHubIconContact {
+  position: absolute;
+  color:  #f5f1ea; 
+  opacity: 0;
+  z-index: 2;
+}
+
+a .linkedinIconContact:hover {
+  color:  #eedfc6; 
+}
+
+a .gitHubIconContact:hover {
+  color:  #eedfc6; 
+}
+
+
+
+
+
+
+
+
+/* ----- MEDIA QUERIES -----  */
+
+
+// // Extra small devices (portrait phones, less than 576px)
+@media screen and (min-width: 100px) and (max-width: 576px) { 
+
+  //INTRO
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+  //HEADER
+  header h1 {
+    font-size: 74px;
+    width: 100%;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  header h2 {
+    font-size: 30px;
+    width: 100%;
+    font-weight: 200;
+    z-index: 2;   
+  }
+
+  .city, .mail {
+    display: none;
+  }
+
+  .portrait {
+    margin-top: -100px;
+  }
+ 
+  //SECTION APROPOS
+  .a-propos {
+    font-size: 19px;
+  }
+
+  .section-a-propos {
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+
+  //SECTION FORMATION
+  .section-formation h3 {
+    font-size: 30px;
+  }
+
+  .project-icon svg, .project-icon img { 
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+  }
+
+  .card-block h4 {
+    font-size: 20px;
+  }
+
+  .modal-body {
+    margin: 6px 10px;
+    padding: 5px;
+  }
+
+  //SECTION PROJETS WEB
+  .section-projets-web .row {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .titreProjetsWeb {
+    font-size: 30px;
+  }
+
+  .villaBouBouImg {
+    order: 1;
+  }
+  
+  .villaBouBouTxt {
+    order: 2;
+  }
+
+
+  // SECTION CONTACT
+  .section-contact {
+    background-color: #2c3e50;
+    position: relative;
+    min-height: 550px;
+  }
+
+  
+  .section-contact h3 {
+    left: 35px;
+    bottom: 70%;
+  }
+  
+  .contactMail {
+    bottom: 33%;
+    left: 147px;
+  }
+  
+  .hrContact {
+    bottom: 5%;
+    left: 36px;
+  }
+
+  .photoPosition {
+    position: absolute;
+    top: 44%;
+    right: 40%;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .portraitContact {
+    top: 40px;
+    left: -102px;
+    margin-top: 20px;
+    width: 180px;
+    z-index: 2;
+  }
+  
+  .landscape {
+    top: -240px;
+    width: 180px;
+    left: -10px;
+  }
+  
+  .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 102px;
+  }
+  
+  .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 102px;
+  }
+  
+  
+
+}
+
+// Small devices (landscape phones, less than 769px)
+@media screen and (min-width: 577px) and (max-width: 769px) {
+
+  // SECTION PROJETS WEB
+  .villaBouBouImg {
+    order: 1;
+  }
+  
+  .villaBouBouTxt {
+    order: 2;
+  }
+
+
+    // SECTION CONTACT
+  .section-contact {
+    background-color: #2c3e50;
+    position: relative;
+    min-height: 750px;
+  }
+
+  .section-contact h3 {
+    left: 130px;
+    bottom: 75%;
+  }
+  
+  .contactMail {
+    bottom: 33%;
+    left: 390px;
+  }
+  
+  .hrContact{
+    bottom: 5%;
+    left: 131px;
+  }
+
+  .photoPosition {
+    top: 46%;
+    right: 43%;
+  }
+  
+  .portraitContact {
+    top: 30px;
+    left: -135px;
+    margin-top: 20px;
+    width: 250px;
+    z-index: 2;
+  }
+  
+  .landscape {
+    top: -335px;
+    width: 250px;
+    left: -10px;
+  }
+
+  a .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 150px;
+  }
+  
+  a .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 150px;
+  }
+  
+}
+
+// Medium devices (tablets, less than 992px)
+@media screen and (min-width: 770px) and (max-width: 992px) {
+
+  //SECTION PROJETS WEB
+  .villaBouBouImg {
+    order: 1;
+  }
+  
+  .villaBouBouTxt {
+    order: 2;
+  }
+
+  .section-projets-web .img-thumbnail {
+    max-width: 55%;
+  }
+
+  .section-projets-web p {
+    width: 80%;
+    margin: auto;
+  }
+  
+
+  // SECTION CONTACT
+  .section-contact {
+    background-color: #2c3e50;
+    position: relative;
+    min-height: 750px;
+  }
+
+  .section-contact h3 {
+    left: 190px;
+    bottom: 75%;
+  }
+  
+  .contactMail {
+    bottom: 35%;
+    left: 460px;
+  }
+  
+  .hrContact{
+    bottom: 5%;
+    left: 191px;
+  }
+
+  .photoPosition {
+    top: 46%;
+    right: 43%;
+  }
+  
+  .portraitContact {
+    top: 40px;
+    left: -135px;
+    margin-top: 20px;
+    width: 235px;
+    z-index: 2;
+  }
+  
+  .landscape {
+    top: -330px;
+    width: 235px; 
+    left: -10px;
+  }
+
+  a  .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 140px;
+  }
+  
+  a .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 140px;
+  }
+  
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media screen and (min-width: 993px) and (max-width: 1200px) { 
+
+  // SECTION CONTACT
+  .section-contact {
+    background-color: #2c3e50;
+    position: relative;
+    min-height: 780px;
+  }
+
+  .section-contact h3 {
+    font-size: 38px;
+    left: 152px;
+    bottom: 75%;
+  }
+
+  .contactMail {
+    bottom: 38%;
+    left: 600px;
+  }
+
+  .hrContact{
+    bottom: 5%;
+    left: 153px;
+  }
+
+  .photoPosition {
+    top: 40%;
+    right: 27%;
+  }
+
+  .portraitContact {
+    top: 40px;
+    left: -135px;
+    margin-top: 20px;
+    width: 230px;
+    z-index: 2;
+  }
+
+  .landscape {
+    top: -280px;
+    width: 230px;
+    left: -10px;
+  } 
+
+  a .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 140px;
+  }
+
+  a .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 140px;
+  }
+
+}
+
+// Sumo devices (desktops, less than 1200px)
+@media screen and (min-width: 1200px) and (max-width: 3000px) { 
+
+   // SECTION CONTACT
+ .section-contact {
+    background-color: #2c3e50;
+    position: relative;
+    min-height: 780px;
+  }
+
+  .section-contact h3 {
+    font-size: 38px;
+    left: 320px;
+    bottom: 75%;
+  }
+
+  .contactMail {
+    bottom: 40%;
+    left: 850px;
+  }
+
+  .hrContact{
+    bottom: 10%;
+    left: 321px;
+  }
+
+  .photoPosition {
+    top: 40%;
+    right: 33%;
+  }
+
+  .portraitContact {
+    top: 80px;
+    left: -168px;
+    margin-top: 20px;
+    width: 280px;
+    z-index: 2;
+  }
+
+  .landscape {
+    top: -290px;
+    width: 280px;
+    left: -10px;
+  } 
+
+  a .linkedinIconContact {
+    font-size: 35px;
+    top: -150%;
+    left: 150px;
+  }
+  
+  a .gitHubIconContact {
+    font-size: 35px;
+    top: -260%;
+    left: 150px;
+  }
+  
+}
