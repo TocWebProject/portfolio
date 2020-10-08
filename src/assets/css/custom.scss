@@ -135,6 +135,11 @@ header h2 {
   font-weight: 400;
 }
 
+.a-propos p {
+  width: 100%;
+  margin: auto;
+}
+
 
 /* ----- Section Formation -----  */
 
@@ -438,6 +443,12 @@ a .gitHubIconContact:hover {
     margin-bottom: 45px;
   }
 
+  .a-propos p {
+    width: 96%;
+    margin: auto;
+  }
+
+
   //SECTION FORMATION
   .section-formation h3 {
     font-size: 30px;
@@ -540,6 +551,11 @@ a .gitHubIconContact:hover {
 
 // Small devices (landscape phones, less than 769px)
 @media screen and (min-width: 577px) and (max-width: 769px) {
+
+  // SECTION A PROPOS
+  .a-propos p {
+    width: 96%;
+  } 
 
   // SECTION PROJETS WEB
   .villaBouBouImg {
@@ -687,6 +703,11 @@ a .gitHubIconContact:hover {
 // Large devices (desktops, less than 1200px)
 @media screen and (min-width: 993px) and (max-width: 1200px) { 
 
+  //SECTION A PROPOS
+  .a-propos p {
+    width: 100%;
+  }
+
   // SECTION CONTACT
   .section-contact {
     background-color: #2c3e50;
@@ -745,6 +766,12 @@ a .gitHubIconContact:hover {
 
 // Sumo devices (desktops, less than 1200px)
 @media screen and (min-width: 1200px) and (max-width: 3000px) { 
+
+  // SECTION A PROPOS
+
+  .a-propos p {
+    width: 85%;
+  }
 
    // SECTION CONTACT
  .section-contact {
