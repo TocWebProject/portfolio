@@ -70,10 +70,11 @@
         <!-- A propos -->
         <Apropos></Apropos>  
         <!-- Formation -->
+        <div id="formation"></div>
         <Formation></Formation>  
         <div id ="projetsweb"></div>
         <!-- Projets Web -->
-        <section ref="projetWeb" class="section-projets-web">
+        <section ref="ProjetWeb" class="section-projets-web">
           <div ref="projetWebTrigger" class="container min-vh-100">
             <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_PdzoiE.json"  background="transparent"  speed="1"  style="margin: auto; width: 110px; height: 110px;"  loop autoplay></lottie-player> 
             <h3 class="titreProjetsWeb mt-4">Projets Web</h3>
@@ -84,7 +85,7 @@
                 </div>
                 <div class="col-lg m-4">
                     <h3 class="mb-4 mt-0">Ian Tocor</h3>
-                    <p class="mb-4">Mon portfolio artistique sous Wordpress, quelques années de création musicale et photographique.</p>
+                    <p class="mb-4">Mon portfolio artistique sous Wordpress, quelques années de créations musicales et photographiques.</p>
                     <a href="https://iantocor.com/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
                 </div>
             </div> 
@@ -116,7 +117,7 @@
 
         <!-- Contact -->
         <div ref="contactTrigger"></div>
-        <section ref="contactTrigger" class="section-contact pt-0 p-5">
+        <section id="contact" ref="contactTrigger" class="section-contact pt-0 p-5">
         <div class="container">
           <div id="contact" class="photoPosition">
             <img ref="portraitContact" class="portraitContact" src="./assets/img/silhouette.png" alt="silhouette Yann Rioual">   
@@ -264,11 +265,11 @@ export default {
 
     // PROJETWEB GSAP 
     projetWebAnimation(){
-      const { projetWeb  } = this.$refs
+      const { ProjetWeb  } = this.$refs
 
-      gsap.to(projetWeb, {
+      gsap.to(ProjetWeb, {
         scrollTrigger: {
-          trigger: projetWeb,
+          trigger: ProjetWeb,
           start: '0% 89%',
           toggleActions: "restart resume resume reverse"
         },

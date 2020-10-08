@@ -1,5 +1,5 @@
 <template>
-   <section id="formation" ref="sectionFormation" class="section-formation">
+   <section ref="sectionFormation" class="section-formation">
         <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_4XmSkB.json"  background="transparent"  speed="1"  style="margin: auto; width: 150px; height: 150px;"  loop autoplay></lottie-player>
         <h3>Formation OpenClassRooms</h3>
         <p> Diplôme Obtenu en septembre 2020 <br> Certifié niveau 5 (bac+2) </p>
@@ -154,18 +154,17 @@ export default {
     },
     methods: {
         formationAnimation(){
+            const { sectionFormation } = this.$refs
 
-        const { sectionFormation } = this.$refs
-        // IN
-        gsap.to(sectionFormation, {
-            scrollTrigger: {
-            trigger: sectionFormation,
-            start: 'top 63%', 
-            toggleActions: "restart resume resume reverse"
-            },
-            ease: "power1.inOut",
-            backgroundColor: "rgba(44, 62, 80, 1)",
-            duration: 0.8,
+            gsap.to(sectionFormation, {
+                scrollTrigger: {
+                trigger: sectionFormation,
+                start: 'top 70%', 
+                toggleActions: "restart resume restart reverse"
+                },
+                ease: "power1.inOut",
+                backgroundColor: "rgba(44, 62, 80, 1)",
+                duration: 0.8,
             });
         }
     },

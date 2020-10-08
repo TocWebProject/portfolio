@@ -46,7 +46,7 @@
                     <li class="list-group-item">Créer de mots de passes sécurisés avec un hachage fiable</li>
                     <li class="list-group-item">Créer un système de login / logout</li>
                 </ul>
-                <a href="https://github.com/TocWebProject/projet5" target="_blank"><img :src="gitHubLogo" class="gitHubLogo" alt="Logo GitHub"></a>
+                <a href="https://github.com/TocWebProject/projet5" target="_blank"><font-awesome-icon class="gitHubIconFormation" :icon="['fab', 'github-square']" /></a>
                 <p><a href="https://github.com/TocWebProject/projet5" target="_blank" class="gitHubLink"> Répertoire GitHub</a></p>
             </slot>
             </div>
@@ -71,7 +71,7 @@ export default {
     },
     data () {
         return {
-            gitHubLogo: require('@/assets/img/logo-github.svg.png')   
+            
         }
     },
 }

@@ -35,7 +35,7 @@
                     <li class="list-group-item">Les noms de classes, de méthode et de variables sont explicites (indifféremment en français ou en anglais)</li>
                     <li class="list-group-item">Il y a une seule classe par fichier</li>
                 </ul>
-                <a href="https://github.com/TocWebProject/projet3" target="_blank"><img :src="gitHubLogo" class="gitHubLogo" alt="Logo GitHub"></a>
+                <a href="https://github.com/TocWebProject/projet3" target="_blank"><font-awesome-icon class="gitHubIconFormation" :icon="['fab', 'github-square']" /></a>
                 <p><a href="https://github.com/TocWebProject/projet3" target="_blank" class="gitHubLink"> Répertoire GitHub</a></p>
             </slot>
             </div>
@@ -60,7 +60,7 @@ export default {
     },
     data () {
         return {
-            gitHubLogo: require('@/assets/img/logo-github.svg.png')
+        
         }
     },
 }

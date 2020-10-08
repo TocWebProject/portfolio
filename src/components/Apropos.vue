@@ -4,7 +4,7 @@
            <div ref="apropos" class="a-propos">
                <p>
                 Après avoir travaillé plusieurs années dans le milieu culturel et artistique à Bruxelles, 
-                j’ai entamé ma reconversion professionnel en Février 2019 et je suis désormais diplômé grâce la formation « Développeur Web Junior » d’OpenclassRoom.
+                j’ai entamé ma reconversion professionnel en Février 2019 et je suis désormais diplômé grâce la formation « Développeur Web Junior » d’OpenclassRooms.
                 Ayant de l'attrait pour l'esthétisme des médias et le graphisme, désormais passionné par le développement <span class="font-weight-bold">frontend</span> et <span class="font-weight-bold">backend</span>, je souhaite
                 me perfectionner à travers un <span class="font-weight-bold">contrat de professionnalisation</span> par l'alternance en validant un bac+3 tout en contribuant aux activités d'une équipe de développeurs(ses) chevroné(e)s 
                </p>
