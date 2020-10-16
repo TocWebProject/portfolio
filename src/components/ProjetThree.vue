@@ -5,7 +5,7 @@
 
             <div class="modal-header dflex align-items-center flex-column">
             <slot name="header">
-                <h4 class="">Concevez une carte interactive de location de vélos</h4> 
+                <h4 class="">Compétences acquises et validées</h4> 
             </slot>
             </div>
 

@@ -5,7 +5,7 @@
 
             <div class="modal-header dflex justify-content-center">
             <slot name="header">
-                <h4>Référentiel d'évaluation</h4> 
+                <h4>Compétences acquises et validées</h4> 
             </slot>
             </div>
 

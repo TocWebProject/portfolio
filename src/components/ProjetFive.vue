@@ -5,7 +5,7 @@
 
             <div class="modal-header dflex align-items-center flex-column">
             <slot name="header">
-                <h4 class="">Descriptif et Référentiel d'évaluation</h4> 
+                <h4 class="">Descriptif et Compétences acquises</h4> 
             </slot>
             </div>
 

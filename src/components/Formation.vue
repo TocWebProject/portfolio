@@ -1,9 +1,10 @@
 <template>
    <section ref="sectionFormation" class="section-formation">
         <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_4XmSkB.json"  background="transparent"  speed="1"  style="margin: auto; width: 150px; height: 150px;"  loop autoplay></lottie-player>
-        <h3>Formation OpenClassRooms</h3>
-        <p> Diplôme Obtenu en septembre 2020 <br> Certifié niveau 5 (bac+2) </p>
+        <h3>Formation</h3>
+        <p class="diplomeFormation">Diplôme Obtenu en octobre 2020 <br> Certifié niveau 5 (bac+2) </p>
         <hr class="separationLineFormation">
+        <p class="sousTitreFormation">Projets réalisés lors de ma formation de Développeur Web junior</p>
         <div class="container pt-4">
            <div class="row justify-content-center">   
                <!-- PROJET1  -->
@@ -19,7 +20,8 @@
                                     <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
                                 </svg>
                             </div>
-                            <h4 class="mt-4 p-2">Intégrez la maquette du site d'une agence web</h4>
+                            <h4 class="mb-0 p-2">Intégrez la maquette du site d'une agence web</h4>
+                            <p class="langageFormation">HTML / CSS</p>
                             <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet1 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetOne v-if="showModalProjet1" @close="showModalProjet1 = false"></ProjetOne>
@@ -38,7 +40,8 @@
                             <div class="project-icon">
                                <img :src="imgProjet2Logo" alt="wordpress logo"> 
                             </div>
-                            <h4 class="mt-4 p-2">Créez un site en personnalisant un thème WordPress</h4>
+                            <h4 class="mb-0 p-2">Créez un site en personnalisant un thème WordPress</h4>
+                            <p class="langageFormation">CMS WordPress</p>
                             <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet2 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetTwo v-if="showModalProjet2" @close="showModalProjet2 = false"></ProjetTwo>
@@ -57,7 +60,8 @@
                             <div class="project-icon">
                                <img :src="imgProjet3Logo" alt="JS logo"> 
                             </div>
-                            <h4 class="mt-4 p-2">Concevez une carte interactive de location de vélos</h4>
+                            <h4 class="mb-0 p-2">Concevez une carte interactive de location de vélos</h4>
+                            <p class="langageFormation">JavaScript et POO</p>
                             <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet3 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetThree v-if="showModalProjet3" @close="showModalProjet3 = false"></ProjetThree>
@@ -76,7 +80,8 @@
                             <div class="project-icon">
                                <img :src="imgProjet4Logo" alt="JS logo"> 
                             </div>
-                            <h4 class="mt-4 p-2">Créez un blog CRUD pour un écrivain</h4>
+                            <h4 class="mb-0 p-2">Créez un blog CRUD pour un écrivain</h4>
+                            <p class="langageFormation">Modèle MVC en PHP</p>
                             <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet4 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetFour v-if="showModalProjet4" @close="showModalProjet4 = false"></ProjetFour>
@@ -95,7 +100,8 @@
                             <div class="project-icon">
                                <img :src="imgProjet5Logo" alt="Laravel and Vue.js Logo"> 
                             </div>
-                            <h4 class="mt-4 p-2">Projet personnel:<br>App Journal de Bord</h4>
+                            <h4 class="mb-0 p-2">Projet personnel:<br>App Journal de Bord</h4>
+                            <p class="langageFormation">Laravel / Vue.js</p>
                             <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet5 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetFive v-if="showModalProjet5" @close="showModalProjet5 = false"></ProjetFive>
