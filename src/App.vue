@@ -28,9 +28,9 @@
         </div>
       </nav>
 
-
+  
         <!-- Header -->
-        <header>
+        <header ref="headerTrigger">
           <div ref="headerInfo" class="container header-info">
               <div class="row">
               <div class="col-sm city">
@@ -111,28 +111,24 @@
                 </div>
             </div>   
           </div>
-         
-
         </section>
 
         <!-- Contact -->
         <div ref="contactTrigger"></div>
         <section id="contact" ref="contactTrigger" class="section-contact pt-0 p-5">
-        <div class="container">
-          <div id="contact" class="photoPosition">
-            <img ref="portraitContact" class="portraitContact" src="./assets/img/silhouette.png" alt="silhouette Yann Rioual">   
-            <img ref="landscape" class="landscape" src="./assets/img/landscape.png" alt="landscape seascape">  
-            <a href="https://www.linkedin.com/in/yann-rioual-19a8061b8/" target="_blank"><font-awesome-icon ref="linkedinIcon" class="linkedinIconContact" :icon="['fab', 'linkedin']" /></a>
-            <a href="https://github.com/TocWebProject/" target="_blank"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" /></a>
+          <div class="container">
+            <div id="contact" class="photoPosition">
+              <img ref="portraitContact" class="portraitContact" src="./assets/img/silhouette.png" alt="silhouette Yann Rioual">   
+              <img ref="landscape" class="landscape" src="./assets/img/landscape.png" alt="landscape seascape">  
+              <a href="https://www.linkedin.com/in/yann-rioual-19a8061b8/" target="_blank"><font-awesome-icon ref="linkedinIcon" class="linkedinIconContact" :icon="['fab', 'linkedin']" /></a>
+              <a href="https://github.com/TocWebProject/" target="_blank"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" /></a>
+            </div>
+            <h3 ref="h3Contact">Rencontrons nous.</h3>
+            <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
+            <hr ref="hrContact" class="hrContact">
+            
           </div>
-          <h3 ref="h3Contact">Rencontrons nous.</h3>
-          <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
-          <hr ref="hrContact" class="hrContact">
-          
-        </div>
-
-        </section>
-        
+        </section> 
     </main>
     <!-- Intro -->
     <div ref="intro" class="intro">
@@ -208,54 +204,52 @@ export default {
 
     // HEADER GSAP
     headerAnimation(){
-      const { h1, h2, portrait, headerInfo } = this.$refs
+      const { h1, h2, portrait, headerInfo, headerTrigger } = this.$refs
 
       gsap.to(headerInfo, {
         scrollTrigger: {
-          trigger: headerInfo,
-          start: '7% 7%',
-          scrub: 2,
+          trigger: headerTrigger,
+          start: 'top 4%',
+          scrub: 1,
           toggleActions: "restart resume reverse reverse"
         },
         ease: "power1.inOut",
-        x : innerWidth * -1,
-        duration: 5 
+        x: innerWidth * -0.2,
       });
 
       gsap.to(h1, {
         scrollTrigger: {
-          trigger: h1,
-          start: '3% 13%',
-          scrub: 3,
+          trigger: headerTrigger,
+          start: 'top 9%',
+          scrub: 1,
           toggleActions: "restart resume reverse reverse"
         },
         ease: "power1.inOut",
-        y : innerWidth * -1,
-        duration: 4 
+        y : innerWidth * -0.6,
+        duration: 3,
       });
 
       gsap.to(h2, { 
         scrollTrigger: {
-          trigger: h2,
-          start: 'bottom 350px',
-          scrub: 3,
+          trigger: headerTrigger,
+          start: 'top 20%',
+          scrub: 1,
           toggleActions: "restart resume reverse reverse",
  
         },
         ease: "power1.inOut",// the ease of the snap animation ("power3" by default),
-        x : innerWidth * -1,
-        duration: 3 
+        x : innerWidth * -0.3,
       });
 
       gsap.to(portrait, {
         scrollTrigger: {
-          trigger: portrait,
-          start: '30% 36%',
-          scrub: 2,
+          trigger: headerTrigger,
+          start: 'top 2%',
+          scrub: 1,
           toggleActions: "restart resume reverse reverse"
         },
         ease: "power1.inOut",
-        y : innerWidth * -1,
+        y : innerWidth * -0.6,
         duration: 4 
       });
       
@@ -293,10 +287,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 37%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -338,10 +331,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 37%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -384,10 +376,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 26%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -431,10 +422,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 26%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -478,10 +468,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 26%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -532,10 +521,9 @@ export default {
             let contactImgTl = gsap.timeline({
               scrollTrigger: {
                 trigger: contactTrigger,
-                pin: true,
                 start: 'top 36%',
                 end: "+=10",
-                scrub: 3,
+                scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
             });
@@ -559,10 +547,9 @@ export default {
           let contactImgTl = gsap.timeline({
               scrollTrigger: {
                 trigger: contactTrigger,
-                pin: true,
                 start: 'top 36%',
                 end: "+=10",
-                scrub: 3,
+                scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
             });
@@ -587,10 +574,9 @@ export default {
             let contactImgTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 25%',
               end: "+=10",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -615,10 +601,9 @@ export default {
           let contactImgTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 25%',
               end: "+=10",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -643,10 +628,9 @@ export default {
           let contactImgTl = gsap.timeline({
               scrollTrigger: {
                 trigger: contactTrigger,
-                pin: true,
                 start: 'top 38%',
                 end: "+=10",
-                scrub: 3,
+                scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
             });

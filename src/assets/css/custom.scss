@@ -7,7 +7,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 50px;
     background-color: #f5f1ea;
     position: relative;
@@ -40,7 +40,6 @@ body {
 }
 
 .intro-text {
-  font-family: 'Cinzel', serif;
   color: #f5f1ea;
   font-size: 3rem;
 }
@@ -126,7 +125,7 @@ header h2 {
   height: auto;
   padding: 40px 20px;
   margin-top: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 190px;
 }
 
 .a-propos {
@@ -160,6 +159,25 @@ header h2 {
   font-size: 47px;
 }
 
+.sousTitreFormation {
+  width: 80%;
+  margin: auto;
+  font-size: 19px;
+  font-style: italic;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.diplomeFormation {
+  font-weight: 500;
+}
+
+.langageFormation {
+  margin-bottom: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
 .card {
   color: #2c3e50;
 }
@@ -168,12 +186,6 @@ header h2 {
   background-color: #f5f1ea;
   font-size: 20px;
   text-transform: uppercase;
-}
-
-.projet1-img {
-  width: auto;
-  background-position: center center;
-  background-size: cover;
 }
 
 .card-block {
@@ -440,11 +452,11 @@ a .gitHubIconContact:hover {
 
   .section-a-propos {
     margin-top: 30px;
-    margin-bottom: 45px;
+    margin-bottom: 65px;
   }
 
   .a-propos p {
-    width: 96%;
+    width: 99%;
     margin: auto;
   }
 
@@ -554,7 +566,7 @@ a .gitHubIconContact:hover {
 
   // SECTION A PROPOS
   .a-propos p {
-    width: 96%;
+    width: 90%;
   } 
 
   // SECTION PROJETS WEB
@@ -624,6 +636,12 @@ a .gitHubIconContact:hover {
 
 // Medium devices (tablets, less than 992px)
 @media screen and (min-width: 770px) and (max-width: 992px) {
+
+  //SECTION A PROPOS
+  .a-propos p {
+    width: 90%;
+    margin: auto;
+  }
 
   //SECTION PROJETS WEB
   .villaBouBouImg {
@@ -705,7 +723,8 @@ a .gitHubIconContact:hover {
 
   //SECTION A PROPOS
   .a-propos p {
-    width: 100%;
+    width: 95%;
+    margin: auto;
   }
 
   // SECTION CONTACT
@@ -770,7 +789,7 @@ a .gitHubIconContact:hover {
   // SECTION A PROPOS
 
   .a-propos p {
-    width: 85%;
+    width: 98%;
   }
 
    // SECTION CONTACT
