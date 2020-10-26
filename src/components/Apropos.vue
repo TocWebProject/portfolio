@@ -43,14 +43,14 @@ export default {
           toggleActions: "restart resume resume reverse"
         },
        opacity: 1,
-       duration: 1 
+       duration: 0.35, 
       });
       //Out
       gsap.to(apropos, {
         scrollTrigger: {
           trigger: apropos,
           start: 'bottom 40%',
-          scrub: 2,
+          scrub: 1,
           toggleActions: "restart resume reverse reverse"
         },
         y : innerWidth * -0.3,

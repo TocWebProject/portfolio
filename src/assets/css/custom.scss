@@ -7,13 +7,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
     margin-bottom: 50px;
     background-color: #f5f1ea;
     position: relative;
     overflow-y: scroll; 
 }
 
+main{
+  margin-top: 60px;
+}
 /* ----- Intro -----  */
 
 .intro {
@@ -114,10 +116,21 @@ header h2 {
 }
 
 .portrait {
-  position: relative;
-  margin-top: -124px;
+  width: 409px;
+  height: 614px; 
 }
 
+.container-portrait{
+  position: relative;
+  margin-top: -124px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-right: auto;
+  margin-left: auto;
+  width: 409px;
+  height: 614px;
+  
+}
 
 /* ----- Section A propos -----  */
 
@@ -442,7 +455,14 @@ a .gitHubIconContact:hover {
   }
 
   .portrait {
+    width: 180px;
+    height: 270px;
+  }
+
+  .container-portrait {
     margin-top: -100px;
+    width: 180px;
+    height: 270px;
   }
  
   //SECTION APROPOS
@@ -563,6 +583,19 @@ a .gitHubIconContact:hover {
 
 // Small devices (landscape phones, less than 769px)
 @media screen and (min-width: 577px) and (max-width: 769px) {
+
+  //HEADER
+
+  .portrait {
+    width: 328px;
+    height: 492px;
+  }
+
+  .container-portrait {
+    // margin-top: -100px;
+    width: 328px;
+    height: 492px;
+  }
 
   // SECTION A PROPOS
   .a-propos p {

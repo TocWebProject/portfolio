@@ -57,14 +57,15 @@
           <h1 ref="h1">Yann Rioual</h1>
           
           <h2 ref="h2">Développeur Web Junior</h2>
-      
-          <picture>
-                <source media="(max-width: 575.97px)" srcset="./assets/img/yann-rioual-portrait-180x270.png">
-                <source media="(min-width: 575.98px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
-                <source media="(max-width: 768px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
-                <source media="(min-width: 769px)" srcset="./assets/img/yann-rioual-portrait-409x614.png">
-                <img id="apropos" ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
-          </picture> 
+          <div class="container-portrait">
+            <picture>
+                  <source media="(max-width: 575.97px)" srcset="./assets/img/yann-rioual-portrait-180x270.png">
+                  <source media="(min-width: 575.98px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
+                  <source media="(max-width: 768px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
+                  <source media="(min-width: 769px)" srcset="./assets/img/yann-rioual-portrait-409x614.png">
+                  <img id="apropos" ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
+            </picture> 
+          </div>
         </header>
 
         <!-- A propos -->
@@ -225,32 +226,32 @@ export default {
           toggleActions: "restart resume reverse reverse"
         },
         ease: "power1.inOut",
-        y : innerWidth * -0.6,
+        y : innerWidth * -0.8,
         duration: 3,
       });
 
       gsap.to(h2, { 
         scrollTrigger: {
           trigger: headerTrigger,
-          start: 'top 20%',
+          start: 'top 5%',
           scrub: 1,
           toggleActions: "restart resume reverse reverse",
  
         },
         ease: "power1.inOut",// the ease of the snap animation ("power3" by default),
-        x : innerWidth * -0.3,
+        x : innerWidth * -0.9,
       });
 
       gsap.to(portrait, {
         scrollTrigger: {
-          trigger: headerTrigger,
-          start: 'top 2%',
+          trigger: portrait,
+          start: 'top 40%',
           scrub: 1,
-          toggleActions: "restart resume reverse reverse"
+          // toggleActions: "restart resume reverse reverse"
         },
         ease: "power1.inOut",
-        y : innerWidth * -0.6,
-        duration: 4 
+        y : innerWidth * -0.4,
+        scale: 1.45,
       });
       
     },
