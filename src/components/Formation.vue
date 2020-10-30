@@ -170,7 +170,7 @@ export default {
                 },
                 ease: "power1.inOut",
                 backgroundColor: "rgba(44, 62, 80, 1)",
-                duration: 0.8,
+                duration: 0.6,
             });
         }
     },

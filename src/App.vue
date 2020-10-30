@@ -28,7 +28,6 @@
         </div>
       </nav>
 
-  
         <!-- Header -->
         <header ref="headerTrigger">
           <div ref="headerInfo" class="container header-info">
@@ -54,7 +53,7 @@
               </div>
           </div>
           
-          <h1 ref="h1">Yann Rioual</h1>
+          <h1 ref="h1" id="apropos" >Yann Rioual</h1>
           
           <h2 ref="h2">Développeur Web Junior</h2>
           <div class="container-portrait">
@@ -63,7 +62,7 @@
                   <source media="(min-width: 575.98px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
                   <source media="(max-width: 768px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
                   <source media="(min-width: 769px)" srcset="./assets/img/yann-rioual-portrait-409x614.png">
-                  <img id="apropos" ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
+                  <img ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
             </picture> 
           </div>
         </header>
@@ -173,20 +172,20 @@ export default {
       const { text1, text2, text3, slider, intro, headerInfo, portrait, h1, h2 } = this.$refs
       const timeline = new TimelineLite()
       
-      timeline.to(text1, {
-        y: "0%", duration: 1, stagger: 0.25
-      }, "-=0.5")
+      timeline.to(text1, { 
+        ease: "Power2.easeInOut", y: "0%", duration: 1, stagger: 0.25
+      })
       timeline.to(text2, {
-        y: "0%", duration: 1, stagger: 0.25
-      }, "-=0.5")
+        ease: "Power2.easeInOut", y: "0%", duration: 1, stagger: 0.25
+      }, "-=0.8")
       timeline.to(text3, {
-        y: "0%", duration: 1, stagger: 0.25
-      }, "-=0.5")
+        ease: "Power2.easeInOut", y: "0%", duration: 1, stagger: 0.25
+      }, "-=0.8")
       timeline.to(slider, {
-        y: "-100%", duration: 1.5, delay: 0.8
+        ease: "Power1.easeInOut", y: "-100%", duration: 1.5, delay: 0.8
       })
       timeline.to(intro, {
-        y: "-100%", duration: 1.2
+        ease: "Power1.easeInOut", y: "-100%", duration: 1.2
       }, "-=1")
       timeline.fromTo(h1, {
         opacity: 0 }, { opacity: 1, duration: 1
@@ -244,14 +243,15 @@ export default {
 
       gsap.to(portrait, {
         scrollTrigger: {
-          trigger: portrait,
-          start: 'top 40%',
+          trigger: headerTrigger,
+          start: 'top 25%',
           scrub: 1,
           // toggleActions: "restart resume reverse reverse"
         },
-        ease: "power1.inOut",
-        y : innerWidth * -0.4,
-        scale: 1.45,
+        ease: "power2.inOut",
+        y : innerWidth * -0.35,
+        scale: 1.3,
+        duration: 2,
       });
       
     },
@@ -270,7 +270,7 @@ export default {
         },
         ease: "power1.inOut",
         backgroundColor: "rgba(245, 241, 234, 1)",
-        duration: 0.8,
+        duration: 0.6,
       });
     },
 
@@ -656,13 +656,15 @@ export default {
   },
 
   mounted() {
-    
-    this.introAnimation();
-    this.headerAnimation();
-    this.projetWebAnimation();
-    this.contactTextAnimation();
-    this.contactImgAnimation();
-   
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        this.introAnimation();
+        this.headerAnimation();
+        this.projetWebAnimation();
+        this.contactTextAnimation();
+        this.contactImgAnimation();
+      }
+    }
   }
 };
 </script>

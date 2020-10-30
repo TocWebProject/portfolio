@@ -1,6 +1,6 @@
 <template>
    <section ref="sectionAPropos" class="section-a-propos">
-       <div class="container align-item-center justify-content-center">
+      <div class="container align-item-center justify-content-center">
            <div ref="apropos" class="a-propos">
                <p>
                 Après avoir travaillé plusieurs années dans le milieu culturel et artistique à Bruxelles, j'ai engagé une reconversion professionnelle en Février 2019. Je suis désormais « <span class="font-weight-bold">Développeur Web Junior</span> » et diplômé dans ce domaine,
@@ -9,7 +9,7 @@
                 me perfectionner à travers un <span class="font-weight-bold">contrat de professionnalisation</span> par l'alternance en validant un bac+3 tout en contribuant aux activités d'une équipe de développeurs(ses) chevroné(e)s 
                </p>
            </div>
-       </div>
+      </div>
     </section>
 </template>
 
@@ -43,7 +43,7 @@ export default {
           toggleActions: "restart resume resume reverse"
         },
        opacity: 1,
-       duration: 0.35, 
+       duration: 0.5, 
       });
       //Out
       gsap.to(apropos, {
@@ -53,7 +53,7 @@ export default {
           scrub: 1,
           toggleActions: "restart resume reverse reverse"
         },
-        y : innerWidth * -0.3,
+        y : innerWidth * -0.2,
         duration: 4,
       });
 
