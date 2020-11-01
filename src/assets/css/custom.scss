@@ -85,6 +85,32 @@ main{
   color: #2c3e50 !important;
 }
 
+.navbar-light  .navbar-toggler {
+  border-color: transparent; /* Removes border color */
+  // float: left; /* Move navbar toggle to left */
+}
+
+.navbar-light  .navbar-toggler-icon:hover {
+  background-color: #faf4ef; /* Changes toggle color on hover */
+}
+
+/* -----  all btn style ----- */
+
+.btn-secondary {
+  color: white;
+  background-color: #4a647e;
+  border: 2px solid white;
+  border-radius: 0px;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  color: #4a647e;
+  background-color: #f5f1ea;
+  border: 2px solid #4a647e;
+}
+
+
 /* ----- Header -----  */
 
 header {
@@ -155,6 +181,38 @@ header h2 {
   width: 100%;
   margin: auto;
 }
+
+.a-propos::before{
+  content: "";
+  position: absolute;
+  margin-top: -40px;
+  right: 37%;
+  width: 25%;
+  height: 2px;
+  background: #2c3e50;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.a-propos::after{
+  content: "";
+  position: absolute;
+  margin-top: 43px;
+  right: 37%;
+  width: 25%;
+  height: 2px;
+  background: #2c3e50;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+.a-propos:hover::before, .a-propos:hover::after {
+  transform: scaleX(1);
+}
+
 
 
 /* ----- Section Formation -----  */
