@@ -86,12 +86,12 @@ main{
 }
 
 .navbar-light  .navbar-toggler {
-  border-color: transparent; /* Removes border color */
-  // float: left; /* Move navbar toggle to left */
+  outline: none;
+  border-color: transparent; 
 }
 
 .navbar-light  .navbar-toggler-icon:hover {
-  background-color: #faf4ef; /* Changes toggle color on hover */
+  background-color: #faf4ef; 
 }
 
 /* -----  all btn style ----- */
@@ -134,6 +134,7 @@ header h1 {
   width: 100%;
   font-weight: 400;
   text-transform: uppercase;
+  mix-blend-mode: multiply;
   z-index: 1;  
 }
 
@@ -142,6 +143,7 @@ header h2 {
   font-size: 40px;
   width: 100%;
   font-weight: 200;
+  mix-blend-mode: multiply;
   z-index: 2;  
 }
 
@@ -816,6 +818,13 @@ a .gitHubIconContact:hover {
 // Large devices (desktops, less than 1200px)
 @media screen and (min-width: 993px) and (max-width: 1200px) { 
 
+  // NavBar Fix Height
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    height: 30px;
+  }
+
   //SECTION A PROPOS
   .a-propos p {
     width: 95%;
@@ -881,10 +890,16 @@ a .gitHubIconContact:hover {
 // Sumo devices (desktops, less than 1200px)
 @media screen and (min-width: 1200px) and (max-width: 3000px) { 
 
-  // SECTION A PROPOS
+  // NavBar Fix Height
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    height: 30px;
+  }
 
+  // SECTION A PROPOS
   .a-propos p {
-    width: 98%;
+    width: 78%;
   }
 
    // SECTION CONTACT
