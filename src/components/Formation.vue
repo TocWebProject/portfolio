@@ -22,7 +22,7 @@
                             </div>
                             <h4 class="mb-0 p-2">Intégrez la maquette du site d'une agence web</h4>
                             <p class="langageFormation">HTML / CSS</p>
-                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet1 = true">Détails</button>
+                            <button type="button" class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet1 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetOne v-if="showModalProjet1" @close="showModalProjet1 = false"></ProjetOne>
                             </transition>
@@ -42,7 +42,7 @@
                             </div>
                             <h4 class="mb-0 p-2">Créez un site en personnalisant un thème WordPress</h4>
                             <p class="langageFormation">CMS WordPress</p>
-                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet2 = true">Détails</button>
+                            <button type="button" class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet2 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetTwo v-if="showModalProjet2" @close="showModalProjet2 = false"></ProjetTwo>
                             </transition>
@@ -62,7 +62,7 @@
                             </div>
                             <h4 class="mb-0 p-2">Concevez une carte interactive de location de vélos</h4>
                             <p class="langageFormation">JavaScript et POO</p>
-                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet3 = true">Détails</button>
+                            <button type="button" class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet3 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetThree v-if="showModalProjet3" @close="showModalProjet3 = false"></ProjetThree>
                             </transition>
@@ -82,7 +82,7 @@
                             </div>
                             <h4 class="mb-0 p-2">Créez un blog CRUD pour un écrivain</h4>
                             <p class="langageFormation">Modèle MVC en PHP</p>
-                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet4 = true">Détails</button>
+                            <button type="button" class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet4 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetFour v-if="showModalProjet4" @close="showModalProjet4 = false"></ProjetFour>
                             </transition>
@@ -102,7 +102,7 @@
                             </div>
                             <h4 class="mb-0 p-2">Projet personnel:<br>App Journal de Bord</h4>
                             <p class="langageFormation">Laravel / Vue.js</p>
-                            <button class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet5 = true">Détails</button>
+                            <button type="button" class="btn btn-secondary mt-1 mb-3" id="show-modal" @click="showModalProjet5 = true">Détails</button>
                             <transition name="openModal">
                                 <ProjetFive v-if="showModalProjet5" @close="showModalProjet5 = false"></ProjetFive>
                             </transition>
