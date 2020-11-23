@@ -2,7 +2,7 @@
   <div id="app">
     <main> 
       <!-- Navbar -->
-      <nav id="navbar-yann" class="navbar fixed-bottom navbar-expand-lg navbar-light justify-content-between">
+      <nav id="navbar-yann" class="navbar navbar-toggleable-md fixed-bottom navbar-expand-lg navbar-light justify-content-between">
         <a class="navbar-brand" href="#">Yann Rioual</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -11,17 +11,17 @@
           <span class="navbar-text text-left">
             Développeur Web Junior
           </span>
-          <ul class="navbar-nav">
+          <ul class="navbar-nav" data-toggle="collapse" data-target=".navbar-collapse">
             <li class="nav-item">
-              <a class="nav-link" href="#apropos">A propos</a>
+              <a class="nav-link"  href="#apropos">A propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#formation">Formation</a>
+              <a class="nav-link"  href="#formation">Formation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#projetsweb">Projets Web</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" >
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -86,14 +86,14 @@
                 <div class="col-lg m-4">
                     <h3 class="mb-4 mt-0">Ian Tocor</h3>
                     <p class="mb-4">Mon portfolio artistique sous Wordpress, quelques années de créations musicales et photographiques.</p>
-                    <a href="https://iantocor.com/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
+                    <a href="https://iantocor.com/" target=”_blank” type="button" class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
                 </div>
             </div> 
             <div class="row align-items-center rounded-lg mb-5">
               <div class="villaBouBouTxt col-lg m-4">
                 <h3 class="mb-4 mt-0">Villa Boubou</h3>
                 <p class="mb-4">Site vitrine Wordpress et SEO pour la boutique dépôt-vente Villa Boubou situé à Rennes.</p>
-                <a href="https://villaboubourennes.fr/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
+                <a href="https://villaboubourennes.fr/" target=”_blank” type="button" class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
               </div>
               <div class="villaBouBouImg col-lg m-4">
                 <img src="./assets/img/projet-web-villa-boubou.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de la boutique Villa Boubou">
@@ -107,7 +107,7 @@
                     <h3 class="mb-4 mt-0">35 Volts</h3>
                     <p class="mb-4">Landing Page avec animations et redirection vers les réseaux sociaux:
                      35 volts Projet de tier lieu Agri-Culturel, site en complément d'un dossier répondant à un appel d'offre de la ville de Rennes</p>
-                    <a href="https://35volts.fr/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>    
+                    <a href="https://35volts.fr/" target=”_blank” type="button" class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>    
                 </div>
             </div>   
           </div>
@@ -126,7 +126,6 @@
             <h3 ref="h3Contact">Rencontrons nous.</h3>
             <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
             <hr ref="hrContact" class="hrContact">
-            
           </div>
         </section> 
     </main>
@@ -237,7 +236,7 @@ export default {
           toggleActions: "restart resume reverse reverse",
  
         },
-        ease: "power1.inOut",// the ease of the snap animation ("power3" by default),
+        ease: "power1.inOut",
         x : innerWidth * -0.9,
       });
 
@@ -249,7 +248,7 @@ export default {
           // toggleActions: "restart resume reverse reverse"
         },
         ease: "power2.inOut",
-        y : innerWidth * -0.35,
+        y : innerWidth * -0.25,
         scale: 1.3,
         duration: 2,
       });
