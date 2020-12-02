@@ -1,15 +1,15 @@
 <template>
    <section ref="sectionAPropos" class="section-a-propos">
-       <div class="container align-item-center justify-content-center">
+      <div class="container align-item-center justify-content-center">
            <div ref="apropos" class="a-propos">
                <p>
-                Après avoir travaillé plusieurs années dans le milieu culturel et artistique à Bruxelles, 
-                j’ai entamé ma reconversion professionnel en Février 2019 et je suis désormais diplômé grâce la formation « Développeur Web Junior » d’OpenclassRooms.
+                Après avoir travaillé plusieurs années dans le milieu culturel et artistique à Bruxelles, j'ai engagé une reconversion professionnelle en Février 2019. Je suis désormais « <span class="font-weight-bold">Développeur Web Junior</span> » et diplômé dans ce domaine,
+                 après avoir suivi une formation spécifique dispensée par OpenClassRooms.
                 Ayant de l'attrait pour l'esthétisme des médias et le graphisme, désormais passionné par le développement <span class="font-weight-bold">frontend</span> et <span class="font-weight-bold">backend</span>, je souhaite
-                me perfectionner à travers un <span class="font-weight-bold">contrat de professionnalisation</span> par l'alternance en validant un bac+3 tout en contribuant aux activités d'une équipe de développeurs(ses) chevroné(e)s 
+                me perfectionner à travers un <span class="font-weight-bold">contrat de professionnalisation</span> par l'alternance sur un rythme 4 jours en entreprise, 1 jour en formation et valider un bac+3 tout en contribuant aux activités d'une équipe de développeurs(ses) chevroné(e)s 
                </p>
            </div>
-       </div>
+      </div>
     </section>
 </template>
 
@@ -43,17 +43,17 @@ export default {
           toggleActions: "restart resume resume reverse"
         },
        opacity: 1,
-       duration: 1 
+       duration: 0.5, 
       });
       //Out
       gsap.to(apropos, {
         scrollTrigger: {
           trigger: apropos,
           start: 'bottom 40%',
-          scrub: 2,
+          scrub: 1,
           toggleActions: "restart resume reverse reverse"
         },
-        y : innerWidth * -0.5,
+        y : innerWidth * -0.2,
         duration: 4,
       });
 

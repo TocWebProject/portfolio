@@ -2,7 +2,7 @@
   <div id="app">
     <main> 
       <!-- Navbar -->
-      <nav id="navbar-yann" class="navbar fixed-bottom navbar-expand-lg navbar-light justify-content-between">
+      <nav id="navbar-yann" class="navbar navbar-toggleable-md fixed-bottom navbar-expand-lg navbar-light justify-content-between">
         <a class="navbar-brand" href="#">Yann Rioual</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -11,26 +11,25 @@
           <span class="navbar-text text-left">
             Développeur Web Junior
           </span>
-          <ul class="navbar-nav">
+          <ul class="navbar-nav" data-toggle="collapse" data-target=".navbar-collapse">
             <li class="nav-item">
-              <a class="nav-link" href="#apropos">A propos</a>
+              <a class="nav-link"  href="#apropos">A propos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#formation">Formation</a>
+              <a class="nav-link"  href="#formation">Formation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#projetsweb">Projets Web</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" >
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </nav>
 
-
         <!-- Header -->
-        <header>
+        <header ref="headerTrigger">
           <div ref="headerInfo" class="container header-info">
               <div class="row">
               <div class="col-sm city">
@@ -54,17 +53,18 @@
               </div>
           </div>
           
-          <h1 ref="h1">Yann Rioual</h1>
+          <h1 ref="h1" id="apropos" >Yann Rioual</h1>
           
           <h2 ref="h2">Développeur Web Junior</h2>
-      
-          <picture>
-                <source media="(max-width: 575.97px)" srcset="./assets/img/yann-rioual-portrait-180x270.png">
-                <source media="(min-width: 575.98px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
-                <source media="(max-width: 768px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
-                <source media="(min-width: 769px)" srcset="./assets/img/yann-rioual-portrait-409x614.png">
-                <img id="apropos" ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
-          </picture> 
+          <div class="container-portrait">
+            <picture>
+                  <source media="(max-width: 575.97px)" srcset="./assets/img/yann-rioual-portrait-180x270.png">
+                  <source media="(min-width: 575.98px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
+                  <source media="(max-width: 768px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
+                  <source media="(min-width: 769px)" srcset="./assets/img/yann-rioual-portrait-409x614.png">
+                  <img ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
+            </picture> 
+          </div>
         </header>
 
         <!-- A propos -->
@@ -86,14 +86,14 @@
                 <div class="col-lg m-4">
                     <h3 class="mb-4 mt-0">Ian Tocor</h3>
                     <p class="mb-4">Mon portfolio artistique sous Wordpress, quelques années de créations musicales et photographiques.</p>
-                    <a href="https://iantocor.com/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
+                    <a href="https://iantocor.com/" target=”_blank” type="button" class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
                 </div>
             </div> 
             <div class="row align-items-center rounded-lg mb-5">
               <div class="villaBouBouTxt col-lg m-4">
                 <h3 class="mb-4 mt-0">Villa Boubou</h3>
                 <p class="mb-4">Site vitrine Wordpress et SEO pour la boutique dépôt-vente Villa Boubou situé à Rennes.</p>
-                <a href="https://villaboubourennes.fr/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
+                <a href="https://villaboubourennes.fr/" target=”_blank” type="button" class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
               </div>
               <div class="villaBouBouImg col-lg m-4">
                 <img src="./assets/img/projet-web-villa-boubou.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de la boutique Villa Boubou">
@@ -107,32 +107,27 @@
                     <h3 class="mb-4 mt-0">35 Volts</h3>
                     <p class="mb-4">Landing Page avec animations et redirection vers les réseaux sociaux:
                      35 volts Projet de tier lieu Agri-Culturel, site en complément d'un dossier répondant à un appel d'offre de la ville de Rennes</p>
-                    <a href="https://35volts.fr/" target=”_blank” class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>    
+                    <a href="https://35volts.fr/" target=”_blank” type="button" class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>    
                 </div>
             </div>   
           </div>
-         
-
         </section>
 
         <!-- Contact -->
         <div ref="contactTrigger"></div>
         <section id="contact" ref="contactTrigger" class="section-contact pt-0 p-5">
-        <div class="container">
-          <div id="contact" class="photoPosition">
-            <img ref="portraitContact" class="portraitContact" src="./assets/img/silhouette.png" alt="silhouette Yann Rioual">   
-            <img ref="landscape" class="landscape" src="./assets/img/landscape.png" alt="landscape seascape">  
-            <a href="https://www.linkedin.com/in/yann-rioual-19a8061b8/" target="_blank"><font-awesome-icon ref="linkedinIcon" class="linkedinIconContact" :icon="['fab', 'linkedin']" /></a>
-            <a href="https://github.com/TocWebProject/" target="_blank"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" /></a>
+          <div class="container">
+            <div id="contact" class="photoPosition">
+              <img ref="portraitContact" class="portraitContact" src="./assets/img/silhouette.png" alt="silhouette Yann Rioual">   
+              <img ref="landscape" class="landscape" src="./assets/img/landscape.png" alt="landscape seascape">  
+              <a href="https://www.linkedin.com/in/yann-rioual-19a8061b8/" target="_blank"><font-awesome-icon ref="linkedinIcon" class="linkedinIconContact" :icon="['fab', 'linkedin']" /></a>
+              <a href="https://github.com/TocWebProject/" target="_blank"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" /></a>
+            </div>
+            <h3 ref="h3Contact">Rencontrons nous.</h3>
+            <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
+            <hr ref="hrContact" class="hrContact">
           </div>
-          <h3 ref="h3Contact">Rencontrons nous.</h3>
-          <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
-          <hr ref="hrContact" class="hrContact">
-          
-        </div>
-
-        </section>
-        
+        </section> 
     </main>
     <!-- Intro -->
     <div ref="intro" class="intro">
@@ -176,20 +171,20 @@ export default {
       const { text1, text2, text3, slider, intro, headerInfo, portrait, h1, h2 } = this.$refs
       const timeline = new TimelineLite()
       
-      timeline.to(text1, {
-        y: "0%", duration: 1, stagger: 0.25
-      }, "-=0.5")
+      timeline.to(text1, { 
+        ease: "Power2.easeInOut", y: "0%", duration: 1, stagger: 0.25
+      })
       timeline.to(text2, {
-        y: "0%", duration: 1, stagger: 0.25
-      }, "-=0.5")
+        ease: "Power2.easeInOut", y: "0%", duration: 1, stagger: 0.25
+      }, "-=0.8")
       timeline.to(text3, {
-        y: "0%", duration: 1, stagger: 0.25
-      }, "-=0.5")
+        ease: "Power2.easeInOut", y: "0%", duration: 1, stagger: 0.25
+      }, "-=0.8")
       timeline.to(slider, {
-        y: "-100%", duration: 1.5, delay: 0.8
+        ease: "Power1.easeInOut", y: "-100%", duration: 1.5, delay: 0.8
       })
       timeline.to(intro, {
-        y: "-100%", duration: 1.2
+        ease: "Power1.easeInOut", y: "-100%", duration: 1.2
       }, "-=1")
       timeline.fromTo(h1, {
         opacity: 0 }, { opacity: 1, duration: 1
@@ -208,55 +203,54 @@ export default {
 
     // HEADER GSAP
     headerAnimation(){
-      const { h1, h2, portrait, headerInfo } = this.$refs
+      const { h1, h2, portrait, headerInfo, headerTrigger } = this.$refs
 
       gsap.to(headerInfo, {
         scrollTrigger: {
-          trigger: headerInfo,
-          start: '7% 7%',
-          scrub: 2,
+          trigger: headerTrigger,
+          start: 'top 4%',
+          scrub: 1,
           toggleActions: "restart resume reverse reverse"
         },
         ease: "power1.inOut",
-        x : innerWidth * -1,
-        duration: 5 
+        x: innerWidth * -0.2,
       });
 
       gsap.to(h1, {
         scrollTrigger: {
-          trigger: h1,
-          start: '3% 13%',
-          scrub: 3,
+          trigger: headerTrigger,
+          start: 'top 9%',
+          scrub: 1,
           toggleActions: "restart resume reverse reverse"
         },
         ease: "power1.inOut",
-        y : innerWidth * -1,
-        duration: 4 
+        y : innerWidth * -0.8,
+        duration: 3,
       });
 
       gsap.to(h2, { 
         scrollTrigger: {
-          trigger: h2,
-          start: 'bottom 350px',
-          scrub: 3,
+          trigger: headerTrigger,
+          start: 'top 5%',
+          scrub: 1,
           toggleActions: "restart resume reverse reverse",
  
         },
-        ease: "power1.inOut",// the ease of the snap animation ("power3" by default),
-        x : innerWidth * -1,
-        duration: 3 
+        ease: "power1.inOut",
+        x : innerWidth * -0.9,
       });
 
       gsap.to(portrait, {
         scrollTrigger: {
-          trigger: portrait,
-          start: '30% 36%',
-          scrub: 2,
-          toggleActions: "restart resume reverse reverse"
+          trigger: headerTrigger,
+          start: 'top 25%',
+          scrub: 1,
+          // toggleActions: "restart resume reverse reverse"
         },
-        ease: "power1.inOut",
-        y : innerWidth * -1,
-        duration: 4 
+        ease: "power2.inOut",
+        y : innerWidth * -0.25,
+        scale: 1.3,
+        duration: 2,
       });
       
     },
@@ -275,7 +269,7 @@ export default {
         },
         ease: "power1.inOut",
         backgroundColor: "rgba(245, 241, 234, 1)",
-        duration: 0.8,
+        duration: 0.6,
       });
     },
 
@@ -293,10 +287,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 37%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -338,10 +331,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 37%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -384,10 +376,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 26%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -431,10 +422,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 26%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -478,10 +468,9 @@ export default {
           let contactTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 26%',
               end: "+=5",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -532,10 +521,9 @@ export default {
             let contactImgTl = gsap.timeline({
               scrollTrigger: {
                 trigger: contactTrigger,
-                pin: true,
                 start: 'top 36%',
                 end: "+=10",
-                scrub: 3,
+                scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
             });
@@ -559,10 +547,9 @@ export default {
           let contactImgTl = gsap.timeline({
               scrollTrigger: {
                 trigger: contactTrigger,
-                pin: true,
                 start: 'top 36%',
                 end: "+=10",
-                scrub: 3,
+                scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
             });
@@ -587,10 +574,9 @@ export default {
             let contactImgTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 25%',
               end: "+=10",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -615,10 +601,9 @@ export default {
           let contactImgTl = gsap.timeline({
             scrollTrigger: {
               trigger: contactTrigger,
-              pin: true,
               start: 'top 25%',
               end: "+=10",
-              scrub: 3,
+              scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
           });
@@ -643,10 +628,9 @@ export default {
           let contactImgTl = gsap.timeline({
               scrollTrigger: {
                 trigger: contactTrigger,
-                pin: true,
                 start: 'top 38%',
                 end: "+=10",
-                scrub: 3,
+                scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
             });
@@ -671,13 +655,15 @@ export default {
   },
 
   mounted() {
-    
-    this.introAnimation();
-    this.headerAnimation();
-    this.projetWebAnimation();
-    this.contactTextAnimation();
-    this.contactImgAnimation();
-   
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        this.introAnimation();
+        this.headerAnimation();
+        this.projetWebAnimation();
+        this.contactTextAnimation();
+        this.contactImgAnimation();
+      }
+    }
   }
 };
 </script>

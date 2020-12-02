@@ -7,13 +7,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 80px;
     margin-bottom: 50px;
     background-color: #f5f1ea;
     position: relative;
     overflow-y: scroll; 
 }
 
+main{
+  margin-top: 60px;
+}
 /* ----- Intro -----  */
 
 .intro {
@@ -40,7 +42,6 @@ body {
 }
 
 .intro-text {
-  font-family: 'Cinzel', serif;
   color: #f5f1ea;
   font-size: 3rem;
 }
@@ -58,6 +59,10 @@ body {
 /* ----- Bottom Navbar -----  */
 .navbar {
   background-color: #f5f1ea;
+}
+
+.fixed-bottom {
+  z-index: 5;
 }
 
 .navbar-brand {
@@ -79,6 +84,32 @@ body {
 .navbar-light .navbar-nav .active > .nav-link {
   color: #2c3e50 !important;
 }
+
+.navbar-light  .navbar-toggler {
+  outline: none;
+  border-color: transparent; 
+}
+
+.navbar-light  .navbar-toggler-icon:hover {
+  background-color: #faf4ef; 
+}
+
+/* -----  all btn style ----- */
+
+.btn-secondary {
+  color: white;
+  background-color: #4a647e;
+  border: 2px solid white;
+  border-radius: 0px;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  color: #4a647e;
+  background-color: #f5f1ea;
+  border: 2px solid #4a647e;
+}
+
 
 /* ----- Header -----  */
 
@@ -103,6 +134,7 @@ header h1 {
   width: 100%;
   font-weight: 400;
   text-transform: uppercase;
+  mix-blend-mode: multiply;
   z-index: 1;  
 }
 
@@ -111,14 +143,26 @@ header h2 {
   font-size: 40px;
   width: 100%;
   font-weight: 200;
+  mix-blend-mode: multiply;
   z-index: 2;  
 }
 
 .portrait {
-  position: relative;
-  margin-top: -124px;
+  width: 409px;
+  height: 614px; 
 }
 
+.container-portrait{
+  position: relative;
+  margin-top: -124px;
+  overflow: hidden;
+  object-fit: cover;
+  margin-right: auto;
+  margin-left: auto;
+  width: 409px;
+  height: 614px;
+  
+}
 
 /* ----- Section A propos -----  */
 
@@ -126,7 +170,7 @@ header h2 {
   height: auto;
   padding: 40px 20px;
   margin-top: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 190px;
 }
 
 .a-propos {
@@ -134,6 +178,43 @@ header h2 {
   font-size: 24px;
   font-weight: 400;
 }
+
+.a-propos p {
+  width: 100%;
+  margin: auto;
+}
+
+.a-propos::before{
+  content: "";
+  position: absolute;
+  margin-top: -40px;
+  right: 37%;
+  width: 25%;
+  height: 2px;
+  background: #2c3e50;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.a-propos::after{
+  content: "";
+  position: absolute;
+  margin-top: 43px;
+  right: 37%;
+  width: 25%;
+  height: 2px;
+  background: #2c3e50;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+.a-propos:hover::before, .a-propos:hover::after {
+  transform: scaleX(1);
+}
+
 
 
 /* ----- Section Formation -----  */
@@ -155,6 +236,25 @@ header h2 {
   font-size: 47px;
 }
 
+.sousTitreFormation {
+  width: 80%;
+  margin: auto;
+  font-size: 19px;
+  font-style: italic;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.diplomeFormation {
+  font-weight: 500;
+}
+
+.langageFormation {
+  margin-bottom: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
 .card {
   color: #2c3e50;
 }
@@ -163,12 +263,6 @@ header h2 {
   background-color: #f5f1ea;
   font-size: 20px;
   text-transform: uppercase;
-}
-
-.projet1-img {
-  width: auto;
-  background-position: center center;
-  background-size: cover;
 }
 
 .card-block {
@@ -425,7 +519,14 @@ a .gitHubIconContact:hover {
   }
 
   .portrait {
+    width: 180px;
+    height: 270px;
+  }
+
+  .container-portrait {
     margin-top: -100px;
+    width: 180px;
+    height: 270px;
   }
  
   //SECTION APROPOS
@@ -435,8 +536,14 @@ a .gitHubIconContact:hover {
 
   .section-a-propos {
     margin-top: 30px;
-    margin-bottom: 45px;
+    margin-bottom: 65px;
   }
+
+  .a-propos p {
+    width: 99%;
+    margin: auto;
+  }
+
 
   //SECTION FORMATION
   .section-formation h3 {
@@ -541,6 +648,24 @@ a .gitHubIconContact:hover {
 // Small devices (landscape phones, less than 769px)
 @media screen and (min-width: 577px) and (max-width: 769px) {
 
+  //HEADER
+
+  .portrait {
+    width: 328px;
+    height: 492px;
+  }
+
+  .container-portrait {
+    // margin-top: -100px;
+    width: 328px;
+    height: 492px;
+  }
+
+  // SECTION A PROPOS
+  .a-propos p {
+    width: 90%;
+  } 
+
   // SECTION PROJETS WEB
   .villaBouBouImg {
     order: 1;
@@ -608,6 +733,12 @@ a .gitHubIconContact:hover {
 
 // Medium devices (tablets, less than 992px)
 @media screen and (min-width: 770px) and (max-width: 992px) {
+
+  //SECTION A PROPOS
+  .a-propos p {
+    width: 90%;
+    margin: auto;
+  }
 
   //SECTION PROJETS WEB
   .villaBouBouImg {
@@ -687,6 +818,19 @@ a .gitHubIconContact:hover {
 // Large devices (desktops, less than 1200px)
 @media screen and (min-width: 993px) and (max-width: 1200px) { 
 
+  // NavBar Fix Height
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    height: 30px;
+  }
+
+  //SECTION A PROPOS
+  .a-propos p {
+    width: 95%;
+    margin: auto;
+  }
+
   // SECTION CONTACT
   .section-contact {
     background-color: #2c3e50;
@@ -745,6 +889,18 @@ a .gitHubIconContact:hover {
 
 // Sumo devices (desktops, less than 1200px)
 @media screen and (min-width: 1200px) and (max-width: 3000px) { 
+
+  // NavBar Fix Height
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    height: 30px;
+  }
+
+  // SECTION A PROPOS
+  .a-propos p {
+    width: 78%;
+  }
 
    // SECTION CONTACT
  .section-contact {
