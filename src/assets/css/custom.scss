@@ -142,6 +142,7 @@ header h2 {
   position: relative;
   font-size: 40px;
   width: 100%;
+  letter-spacing: 3px;
   font-weight: 200;
   mix-blend-mode: multiply;
   z-index: 2;  
@@ -575,11 +576,11 @@ a .gitHubIconContact:hover {
     font-size: 30px;
   }
 
-  .villaBouBouImg {
+  .villaBouBouImg, .transformations-img {
     order: 1;
   }
   
-  .villaBouBouTxt {
+  .villaBouBouTxt, .transformations-txt {
     order: 2;
   }
 
@@ -667,11 +668,11 @@ a .gitHubIconContact:hover {
   } 
 
   // SECTION PROJETS WEB
-  .villaBouBouImg {
+  .villaBouBouImg, .transformations-img {
     order: 1;
   }
   
-  .villaBouBouTxt {
+  .villaBouBouTxt, .transformations-txt {
     order: 2;
   }
 
@@ -741,11 +742,11 @@ a .gitHubIconContact:hover {
   }
 
   //SECTION PROJETS WEB
-  .villaBouBouImg {
+  .villaBouBouImg, .transformations-img {
     order: 1;
   }
   
-  .villaBouBouTxt {
+  .villaBouBouTxt, .transformations-txt {
     order: 2;
   }
 
