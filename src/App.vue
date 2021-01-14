@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
           <span class="navbar-text text-left">
-            Développeur Web Junior
+            Développeur Web 
           </span>
           <ul class="navbar-nav" data-toggle="collapse" data-target=".navbar-collapse">
             <li class="nav-item">
@@ -46,16 +46,16 @@
                   </p>
               </div>
               <div class="col-sm mail">
-                  <p>
+                  <a href="mailto:rioualy@gmail.com" target="_blank" rel="noopener noreferrer">
                   rioualy@gmail.com
-                  </p>
+                  </a>
               </div>
               </div>
           </div>
           
           <h1 ref="h1" id="apropos" >Yann Rioual</h1>
           
-          <h2 ref="h2">Développeur Web Junior</h2>
+          <h2 ref="h2">Développeur Web</h2>
           <div class="container-portrait">
             <picture>
                   <source media="(max-width: 575.97px)" srcset="./assets/img/yann-rioual-portrait-180x270.png">
@@ -80,8 +80,22 @@
             <h3 class="titreProjetsWeb mt-4">Projets Web</h3>
             <hr class="separationProjetWeb mb-5">
             <div class="row align-items-center rounded-lg mb-5">
+              <div class="transformations-txt col-lg m-4">
+                <h3 class="mb-4 mt-0">Refonte Revue Scientifique TransFormations</h3>
+                <p class="mb-4">Université de Lille - Laboratoire Cirel <br> Refonte Frontend sous le cms OJS, maquettes, installation de plugin, bootstrap, css.</p>
+                <a href="https://transformations.univ-lille.fr/index.php/TF/index" target=”_blank” type="button" class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
+              </div>
+              <div class="transformations-img col-lg m-4">
+                <a href="https://transformations.univ-lille.fr/index.php/TF/index" target="_blanck">
+                  <img src="./assets/img/projet-web-transformations.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de la boutique Villa Boubou">
+                </a>
+              </div>
+            </div> 
+            <div class="row align-items-center rounded-lg mb-5">
                 <div class="col-lg m-4">
-                <img src="./assets/img/projet-web-ian-tocor.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de l'artiste Ian Tocor">
+                  <a href="https://iantocor.com/" target="_blanck">
+                    <img src="./assets/img/projet-web-ian-tocor.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de l'artiste Ian Tocor">
+                  </a>
                 </div>
                 <div class="col-lg m-4">
                     <h3 class="mb-4 mt-0">Ian Tocor</h3>
@@ -96,12 +110,16 @@
                 <a href="https://villaboubourennes.fr/" target=”_blank” type="button" class="btn btn-secondary mx-auto d-block d-lg-inline-block">Visiter</a>
               </div>
               <div class="villaBouBouImg col-lg m-4">
-                <img src="./assets/img/projet-web-villa-boubou.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de la boutique Villa Boubou">
+                <a href="https://villaboubourennes.fr/" target="_blanck">
+                  <img src="./assets/img/projet-web-villa-boubou.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de la boutique Villa Boubou">
+                </a>
               </div>
             </div> 
              <div class="row align-items-center rounded-lg mb-5">
                 <div class="col-lg m-4">
-                <img src="./assets/img/projet-web-35volts.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de 35 Volts, projet agri-culturel à Rennes">
+                  <a href="https://35volts.fr/" target="_blanck">
+                    <img src="./assets/img/projet-web-35volts.png" class="img-fluid img-thumbnail" alt="Page d'accueil du site web de 35 Volts, projet agri-culturel à Rennes">
+                  </a>
                 </div>
                 <div class="col-lg m-4 ">
                     <h3 class="mb-4 mt-0">35 Volts</h3>
@@ -124,7 +142,7 @@
               <a href="https://github.com/TocWebProject/" target="_blank"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" /></a>
             </div>
             <h3 ref="h3Contact">Rencontrons nous.</h3>
-            <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
+            <div ref="contactMail" class="contactMail"><a href="mailto:rioualy@gmail.com" target="_blank" rel="noopener noreferrer">rioualy@gmail.com</a></div>
             <hr ref="hrContact" class="hrContact">
           </div>
         </section> 

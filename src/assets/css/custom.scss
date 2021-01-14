@@ -126,6 +126,15 @@ header {
   margin-bottom: 6px;
 }
 
+.header-info .mail a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.header-info .mail a:hover {
+  color: #606e7c;
+}
+
 header h1 {
   font-family: 'Cinzel', serif;
   position: relative;
@@ -142,6 +151,7 @@ header h2 {
   position: relative;
   font-size: 40px;
   width: 100%;
+  letter-spacing: 3px;
   font-weight: 200;
   mix-blend-mode: multiply;
   z-index: 2;  
@@ -428,10 +438,20 @@ a .gitHubIconFormation:hover {
 
 .contactMail {
   position: absolute;
+  z-index: 3;
+}
+
+.contactMail a {
   color: #f5f1ea;
   font-weight: 400;
   text-transform: uppercase;
-  z-index: 3;
+  text-decoration: none;
+}
+
+.contactMail a:hover {
+  color: #eedfc6;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .hrContact {
@@ -575,11 +595,11 @@ a .gitHubIconContact:hover {
     font-size: 30px;
   }
 
-  .villaBouBouImg {
+  .villaBouBouImg, .transformations-img {
     order: 1;
   }
   
-  .villaBouBouTxt {
+  .villaBouBouTxt, .transformations-txt {
     order: 2;
   }
 
@@ -667,11 +687,11 @@ a .gitHubIconContact:hover {
   } 
 
   // SECTION PROJETS WEB
-  .villaBouBouImg {
+  .villaBouBouImg, .transformations-img {
     order: 1;
   }
   
-  .villaBouBouTxt {
+  .villaBouBouTxt, .transformations-txt {
     order: 2;
   }
 
@@ -741,11 +761,11 @@ a .gitHubIconContact:hover {
   }
 
   //SECTION PROJETS WEB
-  .villaBouBouImg {
+  .villaBouBouImg, .transformations-img {
     order: 1;
   }
   
-  .villaBouBouTxt {
+  .villaBouBouTxt, .transformations-txt {
     order: 2;
   }
 
