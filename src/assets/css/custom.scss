@@ -126,6 +126,15 @@ header {
   margin-bottom: 6px;
 }
 
+.header-info .mail a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.header-info .mail a:hover {
+  color: #606e7c;
+}
+
 header h1 {
   font-family: 'Cinzel', serif;
   position: relative;
@@ -429,10 +438,20 @@ a .gitHubIconFormation:hover {
 
 .contactMail {
   position: absolute;
+  z-index: 3;
+}
+
+.contactMail a {
   color: #f5f1ea;
   font-weight: 400;
   text-transform: uppercase;
-  z-index: 3;
+  text-decoration: none;
+}
+
+.contactMail a:hover {
+  color: #eedfc6;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .hrContact {

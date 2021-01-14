@@ -46,9 +46,9 @@
                   </p>
               </div>
               <div class="col-sm mail">
-                  <p>
+                  <a href="mailto:rioualy@gmail.com">
                   rioualy@gmail.com
-                  </p>
+                  </a>
               </div>
               </div>
           </div>
@@ -142,7 +142,7 @@
               <a href="https://github.com/TocWebProject/" target="_blank"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" /></a>
             </div>
             <h3 ref="h3Contact">Rencontrons nous.</h3>
-            <div ref="contactMail" class="contactMail">rioualy@gmail.com</div>
+            <div ref="contactMail" class="contactMail"><a href="mailto:rioualy@gmail.com">rioualy@gmail.com</a></div>
             <hr ref="hrContact" class="hrContact">
           </div>
         </section> 
