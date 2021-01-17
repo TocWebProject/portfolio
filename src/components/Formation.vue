@@ -147,14 +147,14 @@ export default {
             showModalProjet3: false,
             showModalProjet4: false,
             showModalProjet5: false,
-            imgProjet1: require('@/assets/img/projet1.png'),
-            imgProjet2: require('@/assets/img/wpdashboard.png'),
-            imgProjet2Logo: require('@/assets/img/WordPress-logotype.png'),
-            imgProjet3: require('@/assets/img/projet3-screenshot-map-reservation.png'),
-            imgProjet3Logo: require('@/assets/img/JavaScript-logo.png'),
-            imgProjet4: require('@/assets/img/projet4-screenshot.png'),
+            imgProjet1: require('@/assets/img/projet1-730x371.png'),
+            imgProjet2: require('@/assets/img/projet2-wpdashboard-730x371.png'),
+            imgProjet2Logo: require('@/assets/img/wordpress-logotype.png'),
+            imgProjet3: require('@/assets/img/projet3-screenshot-map-reservation-730x371.png'),
+            imgProjet3Logo: require('@/assets/img/javascript-logo.png'),
+            imgProjet4: require('@/assets/img/projet4-screenshot-730x371.png'),
             imgProjet4Logo: require('@/assets/img/php-logo.png'),
-            imgProjet5: require('@/assets/img/projet5-screenshot.png'),
+            imgProjet5: require('@/assets/img/projet5-screenshot-1000x547.png'),
             imgProjet5Logo: require('@/assets/img/laravel-vue.png')
         }
     },
@@ -180,9 +180,3 @@ export default {
     }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-
-</style>

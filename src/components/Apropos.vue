@@ -19,18 +19,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-
 export default {
   name: 'Apropos',
-  props: {
-    
-  },
-  data () {
-  return {
-    
-    }
-  },
-
   methods: {
     aproposAnimation(){
       const { apropos, sectionAPropos } = this.$refs
@@ -65,8 +55,3 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-
-</style>
