@@ -81,8 +81,8 @@
             <div id="contact" class="photoPosition">
               <img ref="portraitContact" class="portraitContact" src="./assets/img/silhouette.png" alt="silhouette Yann Rioual">   
               <img ref="landscape" class="landscape" src="./assets/img/landscape.png" alt="landscape seascape">  
-              <a href="https://www.linkedin.com/in/yann-rioual-19a8061b8/" aria-label="Linkedin" target="_blank"><font-awesome-icon ref="linkedinIcon" class="linkedinIconContact" :icon="['fab', 'linkedin']" /></a>
-              <a href="https://github.com/TocWebProject/" aria-label="Github" target="_blank"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" /></a>
+              <a href="https://www.linkedin.com/in/yann-rioual-19a8061b8/" aria-label="Linkedin" target="_blank" rel="noopener noreferrer"><font-awesome-icon ref="linkedinIcon" class="linkedinIconContact" :icon="['fab', 'linkedin']" alt="lien linkedin" /></a>
+              <a href="https://github.com/TocWebProject/" aria-label="Github" target="_blank" rel="noopener noreferrer"><font-awesome-icon ref="githubIcon" class="gitHubIconContact" :icon="['fab', 'github-square']" alt="lien github"/></a>
             </div>
             <h3 ref="h3Contact">Rencontrons nous.</h3>
             <div ref="contactMail" class="contactMail"><a href="mailto:rioualy@gmail.com" target="_blank" rel="noopener noreferrer">rioualy@gmail.com</a></div>
