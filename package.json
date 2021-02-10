@@ -21,6 +21,8 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@fullhuman/vue-cli-plugin-purgecss": "~4.0.0",
     "@vue/cli-plugin-babel": "^4.5.7",
     "@vue/cli-plugin-eslint": "^4.5.7",
     "@vue/cli-service": "^4.5.7",
