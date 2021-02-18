@@ -1,5 +1,21 @@
 @use '~bootstrap/scss/bootstrap.scss';
 
+// FONTS
+/* cinzel-regular - latin */
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/cinzel-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+  url('../font/cinzel-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/cinzel-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../font/cinzel-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('../font/cinzel-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../font/cinzel-v11-latin-regular.svg#Cinzel') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+
 // General style overrides and custom classes
 body {
     font-family: Avenir, Helvetica, Arial, sans-serif, 'Cinzel', serif;
@@ -42,6 +58,7 @@ main{
 }
 
 .intro-text {
+  margin-bottom: 50px;
   color: #f5f1ea;
   font-size: 3rem;
 }
@@ -110,6 +127,16 @@ main{
   border: 2px solid #4a647e;
 }
 
+/* -----  Blur effect for lazyloading img ----- */
+.v-lazy-image {
+  filter: blur(5px);
+  transition: filter 0.2s;
+}
+
+.v-lazy-image-loaded {
+  filter: blur(0);
+}
+
 
 /* ----- Header -----  */
 
@@ -157,9 +184,9 @@ header h2 {
   z-index: 2;  
 }
 
-.portrait {
-  width: 409px;
-  height: 614px; 
+.portrait .v-lazy-image, .portrait .v-lazy-image-loaded {
+    width: 409px;
+    height: 614px; 
 }
 
 .container-portrait{
@@ -217,9 +244,6 @@ header h2 {
   transform: scaleX(0);
   transition: transform 0.5s ease-in-out;
 }
-
-
-
 
 .a-propos:hover::before, .a-propos:hover::after {
   transform: scaleX(1);
@@ -282,6 +306,7 @@ header h2 {
 .project-icon {
   height: 30px;
 }
+
 .project-icon svg, .project-icon img {
   width: 80px;
   height: 80px;
@@ -325,19 +350,20 @@ a .gitHubIconFormation:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 120%;
   background-color: rgba(44, 62, 80, 0.9);
   display: table;
   transition: opacity 0.3s ease;
+  padding-top: 15px;
 }
 
 .modal-wrapper {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: center;
 }
 
 .modal-container {
-  width: 80vw;
+  width: 90vw;
   height: auto;
   margin: auto;
   background-color:  #fcf9f5;
@@ -380,7 +406,7 @@ a .gitHubIconFormation:hover {
  .openModal-enter-active, .openModal-leave-active {
   transition: opacity .5s;
 }
-.openModal-enter, .openModal-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.openModal-enter, .openModal-leave-to {
   opacity: 0;
 }
 
@@ -414,6 +440,7 @@ a .gitHubIconFormation:hover {
 
 .section-projets-web a {
   width: 100px;
+  -webkit-appearance: none !important;
 }
 
 .section-projets-web .img-thumbnail {
@@ -428,7 +455,6 @@ a .gitHubIconFormation:hover {
   height: 100vh;
   position: relative;
 }
-
 
 .section-contact h3 {
   position: absolute;
@@ -538,7 +564,7 @@ a .gitHubIconContact:hover {
     display: none;
   }
 
-  .portrait {
+  .portrait .v-lazy-image, .portrait .v-lazy-image-loaded  {
     width: 180px;
     height: 270px;
   }
@@ -582,9 +608,10 @@ a .gitHubIconContact:hover {
 
   .modal-body {
     margin: 6px 10px;
-    padding: 5px;
+    padding: 5px; 
+    max-height: 65vh;
   }
-
+  
   //SECTION PROJETS WEB
   .section-projets-web .row {
     margin-left: 20px;
@@ -670,7 +697,7 @@ a .gitHubIconContact:hover {
 
   //HEADER
 
-  .portrait {
+  .portrait .v-lazy-image, .portrait .v-lazy-image-loaded  {
     width: 328px;
     height: 492px;
   }
