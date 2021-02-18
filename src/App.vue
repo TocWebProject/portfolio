@@ -57,13 +57,19 @@
           
           <h2 ref="h2">Développeur Web</h2>
           <div class="container-portrait">
-            <picture>
-                  <source media="(max-width: 575.97px)" srcset="./assets/img/yann-rioual-portrait-180x270.png">
-                  <source media="(min-width: 575.98px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
-                  <source media="(max-width: 768px)" srcset="./assets/img/yann-rioual-portrait-328x492.png">
-                  <source media="(min-width: 769px)" srcset="./assets/img/yann-rioual-portrait-409x614.png">
-                  <img ref="portrait" src="./assets/img/yann-rioual-portrait-409x614.png" class="portrait" alt="portrait Yann Rioual">
-            </picture> 
+            <div ref="portrait">  
+              <v-lazy-image
+                  class="portrait" 
+                  alt="portrait Yann Rioual" 
+                  srcset="./assets/img/yann-rioual-portrait-180x270.png 180w, ./assets/img/yann-rioual-portrait-328x492.png 328w, ./assets/img/yann-rioual-portrait-409x614.png 409w"
+                  sizes="(max-width: 575.97px) 180px, (min-width: 575.98px) 328px, (max-width: 768px) 328px, (min-width: 769px) 409px"
+                  src="./assets/img/yann-rioual-portrait-409x614.png"
+                  :src-placeholder="require('./assets/img/yann-rioual-ultralow.png')"
+                  use-picture
+              >
+                <source srcset="./assets/img/yann-rioual-portrait-180x270.png 180w, ./assets/img/yann-rioual-portrait-328x492.png 328w, ./assets/img/yann-rioual-portrait-409x614.png 409w"/> 
+              </v-lazy-image>
+            </div>
           </div>
         </header>
 
@@ -118,7 +124,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { TimelineLite } from 'gsap'
 
-
 export default {
   name: 'App',
   components: {
@@ -159,8 +164,6 @@ export default {
       timeline.fromTo(portrait, {
       opacity: 0 }, { opacity: 1, duration: 4 }, "-=2")
     },
-
-
 
     // HEADER GSAP
     headerAnimation(){
@@ -463,7 +466,7 @@ export default {
               scrollTrigger: {
                 trigger: contactTrigger,
                 start: 'top 36%',
-                end: "+=10",
+                end: "+=4",
                 scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
@@ -489,7 +492,7 @@ export default {
               scrollTrigger: {
                 trigger: contactTrigger,
                 start: 'top 36%',
-                end: "+=10",
+                end: "+=4",
                 scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
@@ -498,13 +501,13 @@ export default {
             contactImgTl.to( portraitContact, {
               ease: "power4.inOut",
               top: "-250px",
-              duration: 1,
+              duration: 2,
             }, "-=2");
 
             contactImgTl.to(landscape, {
               ease: "power4.inOut",
               top: "0px",
-              duration: 1,
+              duration: 2,
             }, "-=2");
         },
         
@@ -516,7 +519,7 @@ export default {
             scrollTrigger: {
               trigger: contactTrigger,
               start: 'top 25%',
-              end: "+=10",
+              end: "+=4",
               scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
@@ -525,13 +528,13 @@ export default {
           contactImgTl.to( portraitContact, {
             ease: "power4.inOut",
             top: "-250px",
-            duration: 1,
+            duration: 2,
           }, "-=2");
 
           contactImgTl.to(landscape, {
             ease: "power4.inOut",
             top: "0px",
-            duration: 1,
+            duration: 2,
           }, "-=2");
         },
 
@@ -543,7 +546,7 @@ export default {
             scrollTrigger: {
               trigger: contactTrigger,
               start: 'top 25%',
-              end: "+=10",
+              end: "+=4",
               scrub:2,
               toggleActions: "restart resume reverse reverse"
             }
@@ -552,13 +555,13 @@ export default {
           contactImgTl.to( portraitContact, {
             ease: "power4.inOut",
             top: "-250px",
-            duration: 1,
+            duration: 2,
           }, "-=2");
 
           contactImgTl.to(landscape, {
             ease: "power4.inOut",
             top: "0px",
-            duration: 1,
+            duration: 2,
           }, "-=2");
         },
 
@@ -570,7 +573,7 @@ export default {
               scrollTrigger: {
                 trigger: contactTrigger,
                 start: 'top 38%',
-                end: "+=10",
+                end: "+=4",
                 scrub:2,
                 toggleActions: "restart resume reverse reverse"
               }
@@ -579,13 +582,13 @@ export default {
             contactImgTl.to( portraitContact, {
               ease: "power4.inOut",
               top: "-303px",
-              duration: 1,
+              duration: 2,
             }, "-=2");
 
             contactImgTl.to(landscape, {
               ease: "power4.inOut",
               top: "0px",
-              duration: 1,
+              duration: 2,
             }, "-=2");
         },
         
