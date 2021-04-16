@@ -5,7 +5,7 @@
                <p>
                 Après avoir travaillé plusieurs années dans le milieu culturel et artistique à Bruxelles, j'ai engagé une reconversion professionnelle en Février 2019. Je suis désormais « <span class="font-weight-bold">Développeur Web</span> » et diplômé bac+2 dans ce domaine                après avoir suivi une formation spécifique dispensée par OpenClassRooms.
                 Ayant de l'attrait pour l'esthétisme des médias et le graphisme, désormais passionné par le développement <span class="font-weight-bold">frontend</span> et <span class="font-weight-bold">backend</span>, je souhaite
-                me perfectionner à travers un <span class="font-weight-bold">contrat de professionnalisation</span> par l'alternance sur un rythme 4 jours en entreprise, 1 jour en formation et valider un bac+3 tout en contribuant aux activités d'une équipe de développeurs(ses) chevroné(e)s 
+                me perfectionner à travers un <span class="font-weight-bold">contrat de professionnalisation</span> par l'alternance et valider un bac+3 tout en contribuant aux activités d'une équipe de développeurs(ses) chevroné(e)s 
                </p>
            </div>
       </div>

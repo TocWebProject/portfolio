@@ -16,6 +16,15 @@
   font-display: swap;
 }
 
+//Custom Cursor must apply
+// *, *::after, *::before {
+//   cursor: none;
+// }
+
+// :hover {
+//   cursor: none !important;
+// }
+
 // General style overrides and custom classes
 body {
     font-family: Avenir, Helvetica, Arial, sans-serif, 'Cinzel', serif;
@@ -346,7 +355,7 @@ a .gitHubIconFormation:hover {
 // MODAL PROJETS FORMATION 
 .modal-mask {
   position: fixed;
-  z-index: 9998;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -622,11 +631,11 @@ a .gitHubIconContact:hover {
     font-size: 30px;
   }
 
-  .villaBouBouImg, .transformations-img {
+  .villaBouBouImg, .transformations-img, .geode-img {
     order: 1;
   }
   
-  .villaBouBouTxt, .transformations-txt {
+  .villaBouBouTxt, .transformations-txt, .geode-txt {
     order: 2;
   }
 
@@ -714,11 +723,11 @@ a .gitHubIconContact:hover {
   } 
 
   // SECTION PROJETS WEB
-  .villaBouBouImg, .transformations-img {
+  .villaBouBouImg, .transformations-img, .geode-img {
     order: 1;
   }
   
-  .villaBouBouTxt, .transformations-txt {
+  .villaBouBouTxt, .transformations-txt, .geode-txt {
     order: 2;
   }
 
@@ -788,11 +797,11 @@ a .gitHubIconContact:hover {
   }
 
   //SECTION PROJETS WEB
-  .villaBouBouImg, .transformations-img {
+  .villaBouBouImg, .transformations-img, .geode-txt{
     order: 1;
   }
   
-  .villaBouBouTxt, .transformations-txt {
+  .villaBouBouTxt, .transformations-txt, .geode-txt {
     order: 2;
   }
 

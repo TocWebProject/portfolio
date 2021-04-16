@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- <CustomCursor></CustomCursor> -->
     <main> 
       <!-- Navbar -->
       <nav id="navbar-yann" class="navbar navbar-toggleable-md fixed-bottom navbar-expand-lg navbar-light justify-content-between">
@@ -116,6 +117,7 @@
 </template>
 
 <script>
+// import CustomCursor from './components/CustomCursor.vue'
 import Apropos from './components/Apropos.vue'
 import Formation from './components/Formation.vue'
 import ProjetsWeb from './components/ProjetsWeb.vue'
@@ -127,6 +129,7 @@ import { TimelineLite } from 'gsap'
 export default {
   name: 'App',
   components: {
+    // CustomCursor,
     Apropos,  
     Formation,
     ProjetsWeb,
