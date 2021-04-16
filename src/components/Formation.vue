@@ -13,7 +13,7 @@
                         <div class="card-header text-center">
                             Projet 1
                         </div>
-                            <v-lazy-image :src="imgProjet1x730w" :src-placeholder="imgProjet1UltraLow" class="img img-fluid projet1-img" alt="Yann Rioual projet-1 OpenClassRooms"/>
+                            <v-lazy-image :src="imgProjet1x730w" :src-placeholder="imgProjet1UltraLow" width="728" height="370" class="img img-fluid projet1-img" alt="Yann Rioual projet-1 OpenClassRooms"/>
                         <div class="card-block">
                             <div class="project-icon v-lazy-image-loaded">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@
                         <div class="card-header text-center">
                             Projet 2
                         </div>
-                            <v-lazy-image :src="imgProjet2" :src-placeholder="imgProjet2UltraLow" class="img img-fluid" alt="Yann Rioual projet-2 OpenClassRooms"/>
+                            <v-lazy-image :src="imgProjet2" :src-placeholder="imgProjet2UltraLow" width="728" height="330" class="img img-fluid" alt="Yann Rioual projet-2 OpenClassRooms"/>
                         <div class="card-block">
                             <div class="project-icon">
                                <v-lazy-image :src="imgProjet2Logo" alt="wordpress logo"/> 
@@ -55,7 +55,7 @@
                         <div class="card-header text-center">
                             Projet 3
                         </div>
-                        <v-lazy-image :src="imgProjet3" :src-placeholder="imgProjet3UltraLow" class="img img-fluid" alt="Yann Rioual projet-3 OpenClassRooms"/>
+                        <v-lazy-image :src="imgProjet3" :src-placeholder="imgProjet3UltraLow" width="728" height="374" class="img img-fluid" alt="Yann Rioual projet-3 OpenClassRooms"/>
                         <div class="card-block">
                             <div class="project-icon">
                                <v-lazy-image :src="imgProjet3Logo" alt="JS logo"/> 
@@ -75,7 +75,7 @@
                         <div class="card-header text-center">
                             Projet 4
                         </div>
-                           <v-lazy-image :src="imgProjet4" :src-placeholder="imgProjet4UltraLow" class="img img-fluid" alt="Yann Rioual projet-4 OpenClassRooms"/>
+                           <v-lazy-image :src="imgProjet4" :src-placeholder="imgProjet4UltraLow" width="728" height="388" class="img img-fluid" alt="Yann Rioual projet-4 OpenClassRooms"/>
                             <!-- <img :src="imgProjet4" class="img img-fluid projet1-img" alt="projet-4 OpenClassRooms"> -->
                         <div class="card-block">
                             <div class="project-icon">
@@ -96,7 +96,7 @@
                         <div class="card-header text-center">
                             Projet 5
                         </div>
-                            <v-lazy-image :src="imgProjet5" :src-placeholder="imgProjet5UltraLow" class="img img-fluid" alt="Yann Rioual projet-5 OpenClassRooms"/>
+                            <v-lazy-image :src="imgProjet5" :src-placeholder="imgProjet5UltraLow" width="728" height="399" class="img img-fluid" alt="Yann Rioual projet-5 OpenClassRooms"/>
                         <div class="card-block">
                             <div class="project-icon">
                                <v-lazy-image :src="imgProjet5Logo" alt="Laravel and Vue.js Logo"/> 
